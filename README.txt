@@ -1,43 +1,44 @@
-Holistic Healing Psychotherapy - static website starter
+Psychotherapy.care website (static + Markdown CMS)
 
-Files included:
-- index.html
-- approach.html
-- services.html
-- about.html
-- contact.html
-- styles.css
-- script.js
-- assets/*.svg placeholder images
+Overview
+- Static HTML/CSS site with content loaded from Markdown files in /content.
+- Admin editing is handled by Decap CMS at /admin.
+- Designed for deployment on Netlify with GitHub.
 
-Important:
-This is a static HTML/CSS version modeled after the structure and tone of https://www.sabipathways.com/.
-It is NOT directly importable into Squarespace, because Squarespace does not support uploading a full HTML/CSS template zip as a site theme.
+Editable content
+- content/home.md
+- content/approach.md
+- content/services.md
+- content/about.md
+- content/contact.md
 
-Best uses:
-1. Host it as a normal static site.
-2. Use it as a visual/content reference while rebuilding in Squarespace.
-3. Hand it to a designer or developer as a complete starter.
+How content loading works
+- script.js fetches the page-specific Markdown file.
+- YAML frontmatter is parsed and rendered into each page layout.
+- You can update text in Markdown without editing HTML.
 
-To view locally:
-- Open index.html in a browser.
+CMS setup
+- Admin UI: /admin/index.html
+- CMS config: /admin/config.yml
+- Netlify Identity + Git Gateway are required for login and publishing.
 
-To deploy quickly:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static host
+Local preview
+- Use a local web server (recommended), then open index.html through that server.
+- Example with Python: python -m http.server 8080
 
-Before publishing, replace:
-- Placeholder email and phone number
-- Placeholder images in /assets
-- Any placeholder clinical claims
-- Insurance and consultation details
-- Bio, credentials, and license information
+GitHub repository
+- https://github.com/Ljmorrisproscore/Psychotherapy.care
 
-Squarespace rebuild notes:
-- Home page maps to banner + text/image + cards + FAQ + CTA sections.
-- approach.html maps to a banner plus text and three-column cards.
-- services.html maps to repeated service cards.
-- about.html maps to image + bio + values cards.
-- contact.html maps to a form block and practice details block.
+Netlify setup checklist
+1. In Netlify, create a new site from the GitHub repo above.
+2. Build command: none (leave blank)
+3. Publish directory: .
+4. After first deploy, enable Identity (Site settings -> Identity).
+5. In Identity -> Services, enable Git Gateway.
+6. Invite your wife as a user from Identity -> Invite users.
+7. Visit /admin, log in, edit content, publish.
+
+Before production launch
+- Replace placeholder contact details.
+- Replace placeholder images in /assets.
+- Confirm all clinical claims, modalities, and licensure wording.
