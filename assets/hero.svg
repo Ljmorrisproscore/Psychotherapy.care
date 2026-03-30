@@ -1,0 +1,15 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'>
+  <defs>
+    <linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>
+      <stop stop-color='#d7d2c6' offset='0'/>
+      <stop stop-color='#f3efe8' offset='0.5'/>
+      <stop stop-color='#b8c3ae' offset='1'/>
+    </linearGradient>
+  </defs>
+  <rect width='1600' height='900' fill='url(#g)'/>
+  <circle cx='1240' cy='170' r='120' fill='#f8f5ef' opacity='0.7'/>
+  <path d='M0 650 C220 590 340 760 530 700 C760 620 900 790 1160 710 C1340 650 1490 700 1600 660 L1600 900 L0 900 Z' fill='#a4b293' opacity='0.55'/>
+  <path d='M0 700 C200 670 360 780 570 740 C850 690 980 820 1300 730 C1430 695 1515 705 1600 695 L1600 900 L0 900 Z' fill='#8ea07f' opacity='0.35'/>
+  <text x='110' y='150' font-family='Georgia, serif' font-size='54' fill='#42503d'>Holistic Healing</text>
+  <text x='110' y='210' font-family='Arial, sans-serif' font-size='24' fill='#42503d' opacity='0.8'>Replace with a licensed image before launch</text>
+</svg>
