@@ -81,17 +81,6 @@ p { margin: 0 0 16px; color: var(--muted); }
   text-transform: uppercase;
   color: var(--muted);
 }
-.topbar .brand {
-  display: inline-flex;
-  align-items: center;
-  line-height: 0;
-}
-.topbar .brand-logo {
-  width: clamp(180px, 24vw, 300px);
-  height: 58px;
-  object-fit: cover;
-  object-position: center;
-}
 .nav-links { display: flex; align-items: center; gap: 22px; }
 .nav-links a { color: var(--muted); font-size: .98rem; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
@@ -231,8 +220,4 @@ textarea { min-height: 140px; resize: vertical; }
     font: inherit;
   }
   .hero-card, .cta { padding: 32px; }
-  .topbar .brand-logo {
-    width: clamp(150px, 48vw, 240px);
-    height: 48px;
-  }
 }
