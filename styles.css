@@ -87,8 +87,10 @@ p { margin: 0 0 16px; color: var(--muted); }
   line-height: 0;
 }
 .topbar .brand-logo {
-  width: clamp(150px, 20vw, 260px);
-  height: auto;
+  width: clamp(180px, 24vw, 300px);
+  height: 58px;
+  object-fit: cover;
+  object-position: center;
 }
 .nav-links { display: flex; align-items: center; gap: 22px; }
 .nav-links a { color: var(--muted); font-size: .98rem; }
@@ -229,5 +231,8 @@ textarea { min-height: 140px; resize: vertical; }
     font: inherit;
   }
   .hero-card, .cta { padding: 32px; }
-  .topbar .brand-logo { width: clamp(130px, 40vw, 210px); }
+  .topbar .brand-logo {
+    width: clamp(150px, 48vw, 240px);
+    height: 48px;
+  }
 }
