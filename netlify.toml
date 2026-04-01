@@ -5,3 +5,53 @@
   from = "/admin"
   to = "/admin/"
   status = 301
+
+[[redirects]]
+  from = "/approach.html"
+  to = "/approach"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services.html"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/approach"
+  to = "/approach.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200

@@ -5,9 +5,9 @@ hero:
   intro: |
     Holistic Healing Psychotherapy supports adults, teens, couples, and families with an integrative approach that honors mind, body, relationships, and the deeper patterns beneath what hurts.
   primaryCtaText: Begin Your Healing Journey
-  primaryCtaHref: contact.html
+  primaryCtaHref: /contact
   secondaryCtaText: Learn About the Approach
-  secondaryCtaHref: approach.html
+  secondaryCtaHref: /approach
 marquee:
   - Warm, grounded care
   - Integrative psychotherapy
@@ -21,7 +21,7 @@ welcome:
 
     Therapy here is designed to gently help you understand what is happening now, uncover what is underneath it, and move toward lasting change with practical support.
   buttonText: Explore Services
-  buttonHref: services.html
+  buttonHref: /services
   imageSrc: assets/interior.svg
   imageAlt: Placeholder for calming therapy office or lifestyle photography
 approachIntro:
@@ -32,7 +32,7 @@ approachIntro:
 
     This means blending evidence-based care with body awareness, mindfulness, and deeply personalized treatment that helps you feel safer, clearer, and more empowered over time.
   buttonText: Learn More
-  buttonHref: approach.html
+  buttonHref: /approach
   imageSrc: assets/portrait.svg
   imageAlt: Placeholder portrait of therapist
 howItWorks:
@@ -98,7 +98,7 @@ cta:
   title: You do not have to navigate this alone.
   body: Whether you are seeking more peace, more clarity, or a deeper connection with yourself, this practice can be a grounded place to begin.
   primaryCtaText: Contact the Practice
-  primaryCtaHref: contact.html
+  primaryCtaHref: /contact
   secondaryCtaText: Meet Your Therapist
-  secondaryCtaHref: about.html
+  secondaryCtaHref: /about
 ---
