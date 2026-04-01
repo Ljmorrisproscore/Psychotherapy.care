@@ -6,12 +6,13 @@ hero:
 primaryServices:
   - title: Individual Therapy
     description: One-on-one support for anxiety, trauma, stress, grief, life transitions, identity work, burnout, and emotional overwhelm.
-  - title: Child & Teen Therapy
-    description: Developmentally attuned care for younger clients navigating emotions, behavior, school stress, self-esteem, or family change.
+  - title: Teen Therapy
+    description: Developmentally attuned care for teenclients navigating emotions, behavior, school stress, self-esteem, or family change.
   - title: Couples Therapy
     description: Guidance for partners seeking deeper understanding, healthier communication, and stronger emotional connection.
-  - title: Family Therapy
-    description: Support for the family system with a focus on communication, boundaries, conflict repair, and shared understanding.
+  - title: EMDR
+    description:  (Eye Movement Desensitization and Reprocessing) is a research-based psychotherapy approach that helps people resolve painful or stressful events in their lives that contribute to PTSD, anxiety, depression, panic, phobias, addiction, eating disorders, pain, and other health issues.
+  - 
 optional:
   eyebrow: Optional additions
   cards:

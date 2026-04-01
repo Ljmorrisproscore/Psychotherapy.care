@@ -3,7 +3,7 @@ hero:
   eyebrow: Approach
   title: What Is Holistic Therapy?
   intro: |
-    **Holistic therapy** goes beyond talk therapy by integrating mind, body, and spirit. Using tools like mindfulness, breathwork, and energy healing helps reduce stress, release trauma, and promote deep emotional and spiritual healing. By treating root causes, not just symptoms, it supports lasting transformation and growth.
+    **Holistic therapy** goes beyond talk therapy by integrating mind, body, and spirit. Using tools like EMDR, CBT, mindfulness, breathwork, and energy healing helps reduce stress, release trauma, and promote deep emotional and spiritual healing. By treating root causes, not just symptoms, it supports lasting transformation and growth.
 sectionOne:
   title: What's Included in Holistic Therapy?
   body: |
