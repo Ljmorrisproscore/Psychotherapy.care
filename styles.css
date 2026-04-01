@@ -140,6 +140,13 @@ p { margin: 0 0 16px; color: var(--muted); }
   text-transform: uppercase;
 }
 .service-card h3, .faq-item h3 { margin-bottom: 10px; }
+.services-primary-grid {
+  align-items: stretch;
+}
+.services-primary-grid .card {
+  min-height: 290px;
+  height: 100%;
+}
 .approach-pillars .card img {
   width: 100%;
   aspect-ratio: 4 / 3;

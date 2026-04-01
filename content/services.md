@@ -1,12 +1,12 @@
 ---
 hero:
-  eyebrow: Services
-  title: Therapy designed around your needs.
-  intro: Use these as starter service descriptions. Replace them with the exact populations, modalities, and treatment areas your wife actually offers.
+  eyebrow: Our Services
+  title: Our Services
+  intro: Holistic Healing Therapy is here to support individuals, couples & teens through every stage of their healing journey. Scroll down to explore our services and take the first step toward empowered, whole-person care.
 primaryServices:
   - title: Individual Therapy
     description: One-on-one support for anxiety, trauma, stress, grief, life transitions, identity work, burnout, and emotional overwhelm.
-  - title: Team Therapy
+  - title: Teen Therapy
     description: Developmentally attuned care for younger clients navigating emotions, behavior, school stress, self-esteem, or family change.
   - title: Couples Therapy
     description: Guidance for partners seeking deeper understanding, healthier communication, and stronger emotional connection.

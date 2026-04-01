@@ -268,7 +268,7 @@ const renderServices = (data) => {
     </section>
 
     <section class='section compact'>
-      <div class='container grid-2'>
+      <div class='container grid-2 services-primary-grid'>
         ${primary
           .map(
             (item) => `
