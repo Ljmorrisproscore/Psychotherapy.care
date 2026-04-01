@@ -1,7 +1,7 @@
 ---
 hero:
   eyebrow: San Marcos, California
-  title: Compassionate therapy for whole-person healing.
+  title: EMPOWERING YOU THROUGH HOLISTIC THERAPY
   intro: |
     Holistic Healing Psychotherapy supports adults, teens, couples, and families with an integrative approach that honors mind, body, relationships, and the deeper patterns beneath what hurts.
   primaryCtaText: Begin Your Healing Journey

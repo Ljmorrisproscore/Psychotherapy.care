@@ -81,6 +81,15 @@ p { margin: 0 0 16px; color: var(--muted); }
   text-transform: uppercase;
   color: var(--muted);
 }
+.topbar .brand {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+.topbar .brand-logo {
+  width: clamp(150px, 20vw, 260px);
+  height: auto;
+}
 .nav-links { display: flex; align-items: center; gap: 22px; }
 .nav-links a { color: var(--muted); font-size: .98rem; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
@@ -140,6 +149,13 @@ p { margin: 0 0 16px; color: var(--muted); }
   text-transform: uppercase;
 }
 .service-card h3, .faq-item h3 { margin-bottom: 10px; }
+.approach-pillars .card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
 .icon-row { display: flex; gap: 14px; align-items: flex-start; }
 .icon {
   width: 44px;
@@ -213,4 +229,5 @@ textarea { min-height: 140px; resize: vertical; }
     font: inherit;
   }
   .hero-card, .cta { padding: 32px; }
+  .topbar .brand-logo { width: clamp(130px, 40vw, 210px); }
 }

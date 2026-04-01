@@ -139,6 +139,8 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image Source", name: "imageSrc", widget: "string", required: false }
+              - { label: "Image Alt", name: "imageAlt", widget: "string", required: false }
           - label: "Process"
             name: "process"
             widget: "object"

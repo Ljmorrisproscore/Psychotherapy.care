@@ -1,36 +1,49 @@
 ---
 hero:
   eyebrow: Approach
-  title: What is the Holistic Healing Approach?
+  title: What Is Holistic Therapy?
   intro: |
-    This model is inspired by the structure and tone of the reference site, adapted for Holistic Healing Psychotherapy. Update every clinical claim so it accurately reflects your wife's licensure, modalities, and scope.
+    **Holistic therapy** goes beyond talk therapy by integrating mind, body, and spirit. Using tools like mindfulness, breathwork, and energy healing helps reduce stress, release trauma, and promote deep emotional and spiritual healing. By treating root causes, not just symptoms, it supports lasting transformation and growth.
 sectionOne:
-  title: Healing is more than symptom management.
+  title: What's Included in Holistic Therapy?
   body: |
-    The Holistic Healing Approach starts from the belief that emotional distress often lives in several places at once: in thoughts, in the body, in relationship patterns, in old experiences, and in the meanings we make about ourselves. Therapy therefore looks at the full picture.
-
-    Rather than focusing only on short-term relief, this work aims to create deeper understanding, greater nervous system regulation, and a more connected relationship to yourself.
+    Holistic therapy is a powerful pathway to reconnect with your true self, release what no longer serves you, and step into a more grounded, empowered version of who you are.
   imageSrc: assets/interior.svg
-  imageAlt: Placeholder image
+  imageAlt: Holistic therapy session
 pillars:
-  - title: Mind
-    description: We look at beliefs, self-talk, coping patterns, anxiety loops, and the cognitive stories that shape daily life.
-  - title: Body
-    description: Sessions may incorporate grounding, nervous system awareness, breath, and body-based insight when appropriate to your wife's training.
-  - title: Relationships
-    description: Healing often happens in connection. We explore attachment, boundaries, communication, and recurring relational themes.
+  - title: Personalized
+    description: Every session is customized to the individual person. Your holistic therapist will tune into your unique needs and intuitively co-create a holistic treatment plan with you.
+    imageSrc: assets/interior.svg
+    imageAlt: Personalized holistic therapy
+  - title: Integrative
+    description: We combine effective, innovative healing techniques to move you out of the traditional talk therapy room towards a deeper connection with your mind, body, and spirit.
+    imageSrc: assets/interior.svg
+    imageAlt: Integrative holistic therapy
+  - title: Empowering
+    description: Our modern therapeutic practice will empower you to live more authentically and to finally let go of any old belief systems holding you back, so you can become who you're meant to be.
+    imageSrc: assets/interior.svg
+    imageAlt: Empowering holistic therapy
 process:
-  eyebrow: The process
-  title: A grounded path to meaningful change.
+  eyebrow: Benefits Of Holistic Therapy
+  title: Benefits of holistic therapy may include
   steps:
-    - step: "01"
-      title: Understand
-      description: Identify what is painful right now, what patterns repeat, and what support will feel both useful and sustainable.
-    - step: "02"
-      title: Work with the root
-      description: Use carefully chosen therapeutic tools to address the deeper layers that keep distress active.
-    - step: "03"
-      title: Integrate
-      description: Build new responses, deepen self-trust, and carry what you are learning into everyday life.
-note: "Practical note: in Squarespace, this page maps well to a simple banner section plus three stacked text/image sections and a three-column card grid."
+    - step: "Benefit 1"
+      title: Release emotional blocks
+      description: Releasing emotional blocks and limiting beliefs stored in the body and subconscious.
+    - step: "Benefit 2"
+      title: Build self-trust
+      description: Building self-trust, self-awareness, and a stronger connection to your intuition.
+    - step: "Benefit 3"
+      title: Cultivate resilience
+      description: Cultivating emotional resilience and inner calm through integrative mind-body practices.
+    - step: "Benefit 4"
+      title: Experience confidence and clarity
+      description: Experiencing deeper self-love, confidence, and clarity in your life and relationships.
+    - step: "Benefit 5"
+      title: Heal trauma at the root
+      description: Healing from trauma at the root, mentally, emotionally, physically, and spiritually.
+    - step: "Benefit 6"
+      title: Gain practical tools
+      description: Gaining tools to navigate stress, triggers, and life transitions with more ease.
+note: "Therapy isn't just about feeling better, it's about becoming more you. You've carried enough on your own. Whether you're seeking relief from anxiety, healing from past trauma, or craving a deeper connection with yourself, holistic therapy can help you come home to who you truly are."
 ---

@@ -212,11 +212,12 @@ const renderApproach = (data) => {
     </section>
 
     <section class='section compact'>
-      <div class='container grid-3'>
+      <div class='container grid-3 approach-pillars'>
         ${pillars
           .map(
             (pillar) => `
           <article class='card'>
+            ${pillar.imageSrc ? `<img src='${escapeHtml(pillar.imageSrc)}' alt='${escapeHtml(pillar.imageAlt || pillar.title)}'>` : ""}
             <h3>${escapeHtml(pillar.title)}</h3>
             <p>${escapeHtml(pillar.description)}</p>
           </article>`
