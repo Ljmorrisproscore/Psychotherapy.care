@@ -89,7 +89,27 @@ p { margin: 0 0 16px; color: var(--muted); }
   min-height: 88vh;
   display: grid;
   align-items: center;
-  background: linear-gradient(rgba(247,245,242,0.55), rgba(247,245,242,0.3)), url('assets/hero.svg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  background: url('assets/Hero.svg') center/cover no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(247, 245, 242, 0.45), rgba(247, 245, 242, 0.3));
+  z-index: 1;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 .hero-card {
   max-width: 720px;
@@ -227,4 +247,10 @@ textarea { min-height: 140px; resize: vertical; }
     font: inherit;
   }
   .hero-card, .cta { padding: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
 }

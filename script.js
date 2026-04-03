@@ -60,6 +60,9 @@ const renderHome = (data) => {
 
   return `
     <section class='hero'>
+      <video class='hero-video' autoplay muted loop playsinline preload='metadata' aria-hidden='true'>
+        <source src='assets/LandingPage.mp4' type='video/mp4'>
+      </video>
       <div class='container'>
         <div class='hero-card'>
           <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
