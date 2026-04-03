@@ -3,27 +3,27 @@ hero:
   eyebrow: San Marcos, California
   title: EMPOWERING YOU THROUGH HOLISTIC THERAPY
   intro: |
-    Holistic Healing Psychotherapy supports adults, teens, couples, and families with an integrative approach that honors mind, body, relationships, and the deeper patterns beneath what hurts.
+    Holistic Healing Psychotherapy supports adults, teens, couples with an integrative approach that blend evidence-based approaches while honoring mind, body, relationships, and the deeper patterns beneath what hurts.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
   secondaryCtaText: Learn About the Approach
   secondaryCtaHref: /approach
 marquee:
-  - Warm, grounded care
+  - Warm, scient-based, grounded care
   - Integrative psychotherapy
   - Virtual and in-person options
-  - Trauma-informed support
+  - Trauma, Anxiety, Lift Changes, Grief and Loss
 welcome:
   eyebrow: We are so glad you are here
   title: Are you ready to feel more grounded, connected, and like yourself again?
   body: |
-    Maybe you are carrying anxiety that never fully turns off. Maybe past experiences still shape your relationships, your body, or your sense of safety. Or maybe life simply looks fine from the outside while everything inside feels heavy and tangled.
+    Maybe you are carrying anxiety that never fully turns off. Maybe past experiences or trauma still shape your relationships, your body, or your sense of safety. Or maybe life simply looks fine from the outside while everything inside feels heavy and tangled.
 
-    Therapy here is designed to gently help you understand what is happening now, uncover what is underneath it, and move toward lasting change with practical support.
+    Therapy here is designed to empower you towards lasting change with practical support.
   buttonText: Explore Services
   buttonHref: /services
   imageSrc: assets/interior.svg
-  imageAlt: Placeholder for calming therapy office or lifestyle photography
+  imageAlt: Traume, Anxiety, Grief and Loss, Change of Life
 approachIntro:
   eyebrow: What is the Holistic Healing Approach?
   title: Healing that honors the full story, not just the symptoms.
