@@ -87,8 +87,8 @@ p { margin: 0 0 16px; color: var(--muted); }
   gap: 10px;
 }
 .topbar .brand-mark {
-  width: clamp(34px, 4vw, 44px);
-  height: clamp(34px, 4vw, 44px);
+  width: clamp(56px, 7vw, 84px);
+  height: clamp(56px, 7vw, 84px);
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -262,8 +262,8 @@ textarea { min-height: 140px; resize: vertical; }
     font: inherit;
   }
   .topbar .brand-mark {
-    width: 32px;
-    height: 32px;
+    width: 54px;
+    height: 54px;
   }
   .topbar .brand {
     gap: 8px;
