@@ -9,7 +9,7 @@ hero:
   secondaryCtaText: Learn About the Approach
   secondaryCtaHref: /approach
 marquee:
-  - Warm, scient-based, grounded care
+  - Warm, evidentce-based, grounded care
   - Integrative psychotherapy
   - Virtual and in-person options
   - Trauma, Anxiety, Lift Changes, Grief and Loss
