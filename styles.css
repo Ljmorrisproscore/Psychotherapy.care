@@ -81,6 +81,21 @@ p { margin: 0 0 16px; color: var(--muted); }
   text-transform: uppercase;
   color: var(--muted);
 }
+.topbar .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar .brand-mark {
+  width: clamp(34px, 4vw, 44px);
+  height: clamp(34px, 4vw, 44px);
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.topbar .brand-text {
+  display: inline-block;
+  line-height: 1;
+}
 .nav-links { display: flex; align-items: center; gap: 22px; }
 .nav-links a { color: var(--muted); font-size: .98rem; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
@@ -245,6 +260,13 @@ textarea { min-height: 140px; resize: vertical; }
     border-radius: 999px;
     padding: 12px 16px;
     font: inherit;
+  }
+  .topbar .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+  .topbar .brand {
+    gap: 8px;
   }
   .hero-card, .cta { padding: 32px; }
 }

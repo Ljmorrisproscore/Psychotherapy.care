@@ -194,13 +194,19 @@ const renderApproach = (data) => {
   const pillars = Array.isArray(data.pillars) ? data.pillars : [];
   const process = data.process ?? {};
   const steps = Array.isArray(process.steps) ? process.steps : [];
+  const cta = data.cta ?? {};
 
   return `
     <section class='page-hero'>
       <div class='container'>
         <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
         <h1>${escapeHtml(hero.title)}</h1>
-        ${md(hero.intro)}
+        ${hero.intro ? md(hero.intro) : ""}
+        ${
+          hero.primaryCtaText && hero.primaryCtaHref
+            ? `<div class='hero-actions'><a class='btn' href='${escapeHtml(hero.primaryCtaHref)}'>${escapeHtml(hero.primaryCtaText)}</a></div>`
+            : ""
+        }
       </div>
     </section>
 
@@ -214,7 +220,9 @@ const renderApproach = (data) => {
       </div>
     </section>
 
-    <section class='section compact'>
+    ${
+      pillars.length
+        ? `<section class='section compact'>
       <div class='container grid-3 approach-pillars'>
         ${pillars
           .map(
@@ -227,12 +235,14 @@ const renderApproach = (data) => {
           )
           .join("")}
       </div>
-    </section>
+    </section>`
+        : ""
+    }
 
     <section class='section'>
       <div class='container'>
         <div class='eyebrow'>${escapeHtml(process.eyebrow)}</div>
-        <h2>${escapeHtml(process.title)}</h2>
+        ${process.title ? `<h2>${escapeHtml(process.title)}</h2>` : ""}
         <div class='grid-3'>
           ${steps
             .map(
@@ -247,11 +257,33 @@ const renderApproach = (data) => {
       </div>
     </section>
 
-    <section class='section compact'>
+    ${
+      data.note
+        ? `<section class='section compact'>
       <div class='container'>
         <div class='notice'>${escapeHtml(data.note)}</div>
       </div>
-    </section>
+    </section>`
+        : ""
+    }
+
+    ${
+      cta.title
+        ? `<section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <h2>${escapeHtml(cta.title)}</h2>
+          ${cta.body ? `<p>${escapeHtml(cta.body)}</p>` : ""}
+          ${
+            cta.primaryCtaText && cta.primaryCtaHref
+              ? `<div class='hero-actions'><a class='btn' href='${escapeHtml(cta.primaryCtaHref)}'>${escapeHtml(cta.primaryCtaText)}</a></div>`
+              : ""
+          }
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
   `;
 };
 
