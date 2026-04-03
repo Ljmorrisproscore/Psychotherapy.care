@@ -66,7 +66,7 @@ p { margin: 0 0 16px; color: var(--muted); }
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  min-height: 82px;
+  min-height: 104px;
 }
 .brand {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -84,11 +84,11 @@ p { margin: 0 0 16px; color: var(--muted); }
 .topbar .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 .topbar .brand-mark {
-  width: clamp(56px, 7vw, 84px);
-  height: clamp(56px, 7vw, 84px);
+  width: clamp(90px, 11.2vw, 134px);
+  height: clamp(90px, 11.2vw, 134px);
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -243,7 +243,7 @@ textarea { min-height: 140px; resize: vertical; }
   .nav-links {
     display: none;
     position: absolute;
-    top: 82px;
+    top: 104px;
     left: 0;
     right: 0;
     padding: 20px 4%;
@@ -262,11 +262,11 @@ textarea { min-height: 140px; resize: vertical; }
     font: inherit;
   }
   .topbar .brand-mark {
-    width: 54px;
-    height: 54px;
+    width: 86px;
+    height: 86px;
   }
   .topbar .brand {
-    gap: 8px;
+    gap: 10px;
   }
   .hero-card, .cta { padding: 32px; }
 }
