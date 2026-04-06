@@ -239,6 +239,20 @@ p { margin: 0 0 16px; color: var(--muted); }
   position: relative;
   z-index: 1;
 }
+.services-page .page-hero {
+  position: relative;
+  background: url('assets/hereo3.png') center/cover no-repeat;
+}
+.services-page .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(247, 245, 242, 0.62), rgba(247, 245, 242, 0.55));
+}
+.services-page .page-hero .container {
+  position: relative;
+  z-index: 1;
+}
 .notice {
   background: #f2eee7;
   border: 1px solid var(--line);
