@@ -33,7 +33,7 @@ approachIntro:
     This means blending evidence-based care with body awareness, mindfulness, and deeply personalized treatment that helps you feel safer, clearer, and more empowered over time.
   buttonText: Learn More
   buttonHref: /approach
-  imageSrc: assets/portrait.svg
+  imageSrc: assets/darlene3.png
   imageAlt: Your Therapist
 howItWorks:
   eyebrow: How it works
