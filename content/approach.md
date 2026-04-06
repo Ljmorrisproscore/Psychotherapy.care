@@ -1,6 +1,6 @@
 ---
 hero:
-  eyebrow: The SABI Method
+  eyebrow: The Holistict Psychotherapy Method
   title: Your journey to optimal well-being starts here, and we're here to support you every step of the way.
   primaryCtaText: Start Your Therapy Journey
   primaryCtaHref: /contact
