@@ -8,7 +8,7 @@ sectionOne:
   title: New to Holisitic Healing Therapy? Perfect! Start Here!
   body: |
     Holistic therapy goes beyond talk therapy by integrating mind, body, and spirit. Using tools like EMDR, CBT, mindfulness, breathwork, and energy healing helps reduce stress, release trauma, and promote deep emotional and spiritual healing. By treating root causes, not just symptoms, it supports lasting transformation and growth.
-  imageSrc: assets/interior.svg
+  imageSrc: assets/couplestherapy.png
   imageAlt: The Holistin Healing Method
 process:
   eyebrow: Getting Started
