@@ -22,7 +22,7 @@ welcome:
     Therapy here is designed to empower you towards lasting change with practical support.
   buttonText: Explore Services
   buttonHref: /services
-  imageSrc: assets/interior.svg
+  imageSrc: assets/therapist1.png
   imageAlt: Traume, Anxiety, Grief and Loss, Change of Life
 approachIntro:
   eyebrow: What is the Holistic Healing Approach?

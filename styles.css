@@ -160,6 +160,15 @@ p { margin: 0 0 16px; color: var(--muted); }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+.about-portrait {
+  display: flex;
+  justify-content: center;
+}
+.about-portrait img {
+  width: min(100%, 430px);
+  height: auto;
+  object-fit: contain;
+}
 .phase {
   position: relative;
   padding-top: 34px;

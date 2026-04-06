@@ -351,7 +351,7 @@ const renderAbout = (data) => {
 
     <section class='section compact'>
       <div class='container grid-2'>
-        <div class='image-card'><img src='${escapeHtml(bio.imageSrc)}' alt='${escapeHtml(bio.imageAlt)}'></div>
+        <div class='image-card about-portrait'><img src='${escapeHtml(bio.imageSrc)}' alt='${escapeHtml(bio.imageAlt)}'></div>
         <div>
           <h2>${escapeHtml(bio.title)}</h2>
           ${md(bio.body)}
