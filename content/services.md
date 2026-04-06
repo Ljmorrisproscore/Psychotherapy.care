@@ -2,7 +2,7 @@
 hero:
   eyebrow: Our Services
   title: Our Services
-  intro: SABI Holistic Healing Therapy is here to support individuals, couples, families, and children & teens through every stage of their healing journey. Scroll down to explore our services and take the first step toward empowered, whole-person care.
+  intro: Holistic Healing Therapy is here to support individuals, couples, and teens through every stage of their healing journey. Scroll down to explore our services and take the first step toward empowered, whole-person care.
 primaryServices:
   - title: Individual Therapy
     description: One-on-one support for anxiety, trauma, stress, grief, life transitions, identity work, burnout, and emotional overwhelm.
