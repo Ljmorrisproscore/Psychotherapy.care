@@ -1,9 +1,9 @@
 ---
 hero:
   eyebrow: San Marcos, California
-  title: EMPOWERING YOU THROUGH HOLISTIC THERAPY
+  title: EMPOWERING LIVES THROUGH HOLISTIC INTEGRATIVE THERAPY
   intro: |
-    Holistic Healing Psychotherapy supports adults, teens, couples with an integrative approach that blend evidence-based approaches while honoring mind, body, relationships, and the deeper patterns beneath what hurts.
+    Holistic Healing Psychotherapy supports adults, teens and couples with an integrative approach that blend evidence-based approaches while honoring mind, body, relationships, and the deeper patterns beneath what hurts.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
   secondaryCtaText: Learn About the Approach
