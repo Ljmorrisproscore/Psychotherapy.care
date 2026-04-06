@@ -216,6 +216,20 @@ p { margin: 0 0 16px; color: var(--muted); }
 .list-clean { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; color: var(--muted); }
 .page-hero { padding: 110px 0 48px; }
 .page-hero p { max-width: 760px; }
+.approach-page .page-hero {
+  position: relative;
+  background: url('assets/WhatisholisticeHero.png') center/cover no-repeat;
+}
+.approach-page .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(247, 245, 242, 0.62), rgba(247, 245, 242, 0.55));
+}
+.approach-page .page-hero .container {
+  position: relative;
+  z-index: 1;
+}
 .notice {
   background: #f2eee7;
   border: 1px solid var(--line);
