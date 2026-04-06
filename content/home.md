@@ -1,7 +1,7 @@
 ---
 hero:
   eyebrow: San Marcos, California
-  title: EMPOWERING LIVES THROUGH HOLISTIC INTEGRATIVE THERAPY
+  title: EMPOWERING LIVES THROUGH HOLISTIC THERAPY
   intro: |
     Holistic Healing Psychotherapy supports adults, teens and couples with an integrative approach that blend evidence-based approaches while honoring mind, body, relationships, and the deeper patterns beneath what hurts.
   primaryCtaText: Begin Your Healing Journey
@@ -9,13 +9,13 @@ hero:
   secondaryCtaText: Learn About the Approach
   secondaryCtaHref: /approach
 marquee:
-  - Warm, evidentce-based, grounded care
+  - Evidentce-based, grounded care
   - Integrative psychotherapy
   - Virtual and in-person options
   - Trauma, Anxiety, Lift Changes, Grief and Loss
 welcome:
   eyebrow: We are so glad you are here
-  title: Are you ready to feel more grounded, connected, and like yourself again?
+  title: Are you ready to to begin a journey towards healing and empowerment?
   body: |
     Maybe you are carrying anxiety that never fully turns off. Maybe past experiences or trauma still shape your relationships, your body, or your sense of safety. Or maybe life simply looks fine from the outside while everything inside feels heavy and tangled.
 
@@ -26,7 +26,7 @@ welcome:
   imageAlt: Traume, Anxiety, Grief and Loss, Change of Life
 approachIntro:
   eyebrow: What is the Holistic Healing Approach?
-  title: Healing that honors the full story, not just the symptoms.
+  title: Evidence based approaches that honors the full story, not just the symptoms.
   body: |
     The Holistic Healing Approach recognizes that emotional pain is rarely one-dimensional. We work with thoughts, nervous system responses, relationship patterns, beliefs, and lived experience so therapy supports the whole person.
 
@@ -34,7 +34,7 @@ approachIntro:
   buttonText: Learn More
   buttonHref: /approach
   imageSrc: assets/portrait.svg
-  imageAlt: Placeholder portrait of therapist
+  imageAlt: Your Therapist
 howItWorks:
   eyebrow: How it works
   title: A simple, supportive path forward.
@@ -54,16 +54,14 @@ services:
   note: Want a closer match to the reference site? Add a fifth card for Therapy Intensives.
   cards:
     - title: Individual Therapy
-      description: Personalized sessions to support emotional well-being, reduce distress, and create meaningful growth.
-    - title: Child & Teen Therapy
+      description: Personalized sessions to support emotional well-being, heal trauma,  reduce distress, and create meaningful growth
+    - title: Teen Therapy
       description: Age-appropriate support for younger clients navigating emotions, school stress, identity, or family transitions.
     - title: Couples Therapy
       description: Guidance for partners working on communication, trust, connection, and healthier conflict patterns.
-    - title: Family Therapy
-      description: Supportive sessions that strengthen understanding, boundaries, and healthier dynamics across the family system.
 reasons:
   eyebrow: Why clients choose this practice
-  title: Care that is warm, thoughtful, and grounded in real life.
+  title: Your are unique, our integrative approach uses the best methods applicable to your situation..
   items:
     - number: 1
       title: Whole-person care
