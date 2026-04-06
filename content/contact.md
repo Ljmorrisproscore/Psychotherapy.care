@@ -8,14 +8,14 @@ form:
   namePlaceholder: Name
   emailPlaceholder: Email
   phonePlaceholder: Phone (optional)
-  messagePlaceholder: Are you requesting a specific therapist?
+  messagePlaceholder: Please include any non-personal information, such as if you are requesting a specific therapist or service?
   buttonText: Send Inquiry
   note: .
 details:
-  title: Practice details
+  title: Holistice Healing Psychotherapy
   location: San Marcos, California
-  email: hello@holistichealingpsychotherapy.com
-  phone: "(760) 555-0123"
+  email: info@psychotherapy.care
+  phone: "(760) 454-7249"
   hours: Monday through Friday, 9:00 am to 5:00 pm PT
-  consultations: Update this section with your real intake process, insurance info, or scheduling link.
+  consultations: We are happy to offer a complimentary 15 minute consultation.
 ---
