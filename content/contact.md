@@ -2,15 +2,15 @@
 hero:
   eyebrow: Contact
   title: Start your therapy journey.
-  intro: Use this page as a visual and copy template. If you deploy it as a static website, connect the form to Formspree, Basin, Netlify Forms, or your own backend.
+  intro: We look forward to hearing from you.
 form:
   title: Reach out
   namePlaceholder: Name
   emailPlaceholder: Email
   phonePlaceholder: Phone (optional)
-  messagePlaceholder: How can we support you?
+  messagePlaceholder: Are you requesting a specific therapist?
   buttonText: Send Inquiry
-  note: This demo form is not wired up yet.
+  note: .
 details:
   title: Practice details
   location: San Marcos, California

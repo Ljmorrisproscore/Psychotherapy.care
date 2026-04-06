@@ -397,12 +397,16 @@ const renderContact = (data) => {
       <div class='container grid-2'>
         <div class='card'>
           <h2>${escapeHtml(form.title)}</h2>
-          <form class='contact-form'>
-            <input class='input' type='text' placeholder='${escapeHtml(form.namePlaceholder)}'>
-            <input class='input' type='email' placeholder='${escapeHtml(form.emailPlaceholder)}'>
-            <input class='input' type='text' placeholder='${escapeHtml(form.phonePlaceholder)}'>
-            <textarea placeholder='${escapeHtml(form.messagePlaceholder)}'></textarea>
-            <button class='btn' type='button'>${escapeHtml(form.buttonText)}</button>
+          <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
+            <input type='hidden' name='form-name' value='contact'>
+            <p style='display:none;'>
+              <label>Do not fill this out: <input name='bot-field'></label>
+            </p>
+            <input class='input' type='text' name='name' placeholder='${escapeHtml(form.namePlaceholder)}' required>
+            <input class='input' type='email' name='email' placeholder='${escapeHtml(form.emailPlaceholder)}' required>
+            <input class='input' type='text' name='phone' placeholder='${escapeHtml(form.phonePlaceholder)}'>
+            <textarea name='message' placeholder='${escapeHtml(form.messagePlaceholder)}' required></textarea>
+            <button class='btn' type='submit'>${escapeHtml(form.buttonText)}</button>
           </form>
           <p class='small' style='margin-top:12px;'>${escapeHtml(form.note)}</p>
         </div>
