@@ -11,7 +11,7 @@ bio:
     - Every person is different, so their therapy should uniquely tailored to their needs.
     - Integrative Therapy gives our therapists the freedom to bring all resources together to help you.
     
-  imageSrc: assets/DarlenePic.jpg
+  imageSrc: assets/DarlenePic.png
   imageAlt: Portrait of therapist Darlene
 values:
   - title: Warmth
