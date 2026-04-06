@@ -78,23 +78,21 @@ reasons:
     - number: 5
       title: Designed for long-term change
       description: The work aims beyond temporary relief so you can feel more anchored in yourself over time.
-    - number: 6
-      title: Easy to maintain
-      description: This template is intentionally simple so it can be rebuilt in Squarespace section by section if you choose.
+ 
 faq:
   eyebrow: Frequently asked questions
   title: Helpful answers before you begin.
   items:
     - question: Do you offer virtual sessions?
-      answer: Yes. This template includes copy for either in-person, virtual, or hybrid care. Update it to match your actual practice model before publishing.
+      answer: Yes. we offer in-person, virtual, or hybrid care. 
     - question: Do you accept insurance?
-      answer: Replace this placeholder with your wife's real insurance information, private-pay rates, and superbill policy.
+      answer: Yes, we accept several insurance providers, and more are being added on a regular basis.
     - question: What issues do you help with?
-      answer: Common specialties include anxiety, trauma, life transitions, relationship concerns, burnout, grief, and emotional overwhelm.
+      answer: Our specialties include anxiety, trauma, grief and loss, life transitions, relationship concerns, and emotional overwhelm.
 cta:
   eyebrow: Ready when you are
   title: You do not have to navigate this alone.
-  body: Whether you are seeking more peace, more clarity, or a deeper connection with yourself, this practice can be a grounded place to begin.
+  body: Whether you are seeking more relief from trauma, anxiety, grief, loss, desiring peace, more clarity, or a deeper connection with yourself, this practice can be your place to begin.
   primaryCtaText: Contact the Practice
   primaryCtaHref: /contact
   secondaryCtaText: Meet Your Therapist
