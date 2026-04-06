@@ -3,6 +3,7 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='refresh' content='6;url=/'>
   <title>Thank You | Holistic Healing Psychotherapy</title>
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
@@ -34,14 +35,17 @@
           <div class='eyebrow'>Thank You</div>
           <h1>Your inquiry has been sent.</h1>
           <p>We received your message and will follow up as soon as possible.</p>
-          <div class='hero-actions'>
-            <a class='btn' href='/'>Return Home</a>
-            <a class='btn secondary' href='/contact'>Send Another Message</a>
-          </div>
+          <p class='small'>You will be redirected to the homepage in a few seconds.</p>
+          <p class='small'>If not, <a href='/'>click here</a>.</p>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 6000);
+  </script>
   <script type='module' src='script.js'></script>
 </body>
 </html>
