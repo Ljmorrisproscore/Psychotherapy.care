@@ -60,7 +60,7 @@ const renderHome = (data) => {
 
   return `
     <section class='hero'>
-      <video class='hero-video' autoplay muted loop playsinline preload='metadata' aria-hidden='true'>
+      <video class='hero-video' autoplay muted loop playsinline webkit-playsinline preload='auto' poster='assets/Hero.svg' aria-hidden='true'>
         <source src='assets/LandingPage.mp4' type='video/mp4'>
       </video>
       <div class='container'>
@@ -458,4 +458,25 @@ const loadPageContent = async () => {
   }
 };
 
-loadPageContent();
+const initHeroVideoPlayback = () => {
+  const video = document.querySelector(".hero-video");
+  if (!video) {
+    return;
+  }
+
+  // Some browsers require an explicit play() call even with autoplay+muted.
+  const tryPlay = () => {
+    const attempt = video.play();
+    if (attempt && typeof attempt.catch === "function") {
+      attempt.catch(() => {
+        // Keep static fallback poster/background if playback is blocked.
+      });
+    }
+  };
+
+  tryPlay();
+  document.addEventListener("click", tryPlay, { once: true });
+  document.addEventListener("touchstart", tryPlay, { once: true });
+};
+
+loadPageContent().then(initHeroVideoPlayback);
