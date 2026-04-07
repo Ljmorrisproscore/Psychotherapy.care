@@ -1,6 +1,6 @@
 ---
 hero:
-  eyebrow: 338 Via Vera Cruz, Suite 260, San Marcos, CA 92078
+  eyebrow: 
   title: Compassionate Care for Mind, Body & Spirit
   intro: An integrative and deeply supportive approach that blends evidence-based practices with holistic modalities to support mental, physical, spiritual, and emotional healing.
   primaryCtaText: Begin Your Healing Journey
