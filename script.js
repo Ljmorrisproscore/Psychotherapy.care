@@ -154,7 +154,7 @@ const renderHome = (data) => {
       </div>
     </section>
 
-    <section class='section compact'>
+    <section id='faq' class='section compact'>
       <div class='container'>
         <div class='eyebrow'>${escapeHtml(faq.eyebrow)}</div>
         <h2>${escapeHtml(faq.title)}</h2>
