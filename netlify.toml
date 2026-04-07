@@ -19,6 +19,12 @@
   force = true
 
 [[redirects]]
+  from = "/specialties.html"
+  to = "/specialties"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/about.html"
   to = "/about"
   status = 301
@@ -44,6 +50,11 @@
 [[redirects]]
   from = "/services"
   to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/specialties"
+  to = "/specialties.html"
   status = 200
 
 [[redirects]]

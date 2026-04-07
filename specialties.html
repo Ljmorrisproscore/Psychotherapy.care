@@ -3,8 +3,7 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta http-equiv='refresh' content='6;url=/'>
-  <title>Thank You | Holistic Healing Psychotherapy</title>
+  <title>Specialties | Holistic Healing Psychotherapy</title>
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
   <link href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap' rel='stylesheet'>
@@ -23,29 +22,25 @@
         <a href='/about'>About</a>
         <a href='/approach'>What is the Holistice Healing Approachs?</a>
         <a href='/services'>Services</a>
-        <a href='/specialties'>Specialities</a>
+        <a class='active' href='/specialties'>Specialities</a>
         <a class='btn' href='/contact'>Contact U</a>
       </nav>
     </div>
   </header>
-  <main>
-    <section class='section'>
+  <main id='main-content' data-page='specialties'>
+    <section class='section compact'>
       <div class='container'>
-        <div class='cta'>
-          <div class='eyebrow'>Thank You</div>
-          <h1>Your inquiry has been sent.</h1>
-          <p>We received your message and will follow up as soon as possible.</p>
-          <p class='small'>You will be redirected to the homepage in a few seconds.</p>
-          <p class='small'>If not, <a href='/'>click here</a>.</p>
-        </div>
+        <div class='card'>Loading content...</div>
       </div>
     </section>
   </main>
-  <script>
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 6000);
-  </script>
+  <footer class='footer'>
+    <div class='container footer-grid'>
+      <div><div class='brand'>Holistic Healing<small>Psychotherapy</small></div></div>
+      <div><h3>Pages</h3><ul class='list-clean'><li><a href='/approach'>Approach</a></li><li><a href='/services'>Services</a></li><li><a href='/specialties'>Specialties</a></li></ul></div>
+      <div><h3>Contact</h3><ul class='list-clean'><li>info@psychotherapy.care</li><li>(760) 454-7249</li><li>San Marcos, California</li></ul></div>
+    </div>
+  </footer>
   <script type='module' src='script.js'></script>
 </body>
 </html>

@@ -335,6 +335,48 @@ const renderServices = (data) => {
   `;
 };
 
+const renderSpecialties = (data) => {
+  const hero = data.hero ?? {};
+  const specialties = Array.isArray(data.specialties) ? data.specialties : [];
+  const cta = data.cta ?? {};
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        <p>${escapeHtml(hero.intro)}</p>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container grid-2 services-primary-grid'>
+        ${specialties
+          .map(
+            (item) => `
+          <article class='card'>
+            <h2>${escapeHtml(item.title)}</h2>
+            <p>${escapeHtml(item.description)}</p>
+          </article>`
+          )
+          .join("")}
+      </div>
+    </section>
+
+    <section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <h2>${escapeHtml(cta.title)}</h2>
+          <p>${escapeHtml(cta.body)}</p>
+          <div class='hero-actions'>
+            <a class='btn' href='${escapeHtml(cta.primaryCtaHref)}'>${escapeHtml(cta.primaryCtaText)}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+};
+
 const renderAbout = (data) => {
   const hero = data.hero ?? {};
   const bio = data.bio ?? {};
@@ -427,6 +469,7 @@ const renderers = {
   home: renderHome,
   approach: renderApproach,
   services: renderServices,
+  specialties: renderSpecialties,
   about: renderAbout,
   contact: renderContact,
 };

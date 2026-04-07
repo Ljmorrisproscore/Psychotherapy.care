@@ -197,6 +197,32 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
 
+      - name: "specialties"
+        label: "Specialties"
+        file: "content/specialties.md"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Specialties List"
+            name: "specialties"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Primary CTA Text", name: "primaryCtaText", widget: "string" }
+              - { label: "Primary CTA Href", name: "primaryCtaHref", widget: "string" }
+
       - name: "about"
         label: "About"
         file: "content/about.md"
