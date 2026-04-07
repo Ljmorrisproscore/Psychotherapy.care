@@ -8,13 +8,12 @@ hero:
   secondaryCtaText: Learn About the Approach
   secondaryCtaHref: /approach
 marquee:
-  - Evidentce-based, grounded care
-  - Integrative psychotherapy
-  - Virtual and in-person options
-  - Trauma, Anxiety, Lift Changes, Grief and Loss
+  - Personalized
+  - Whole-Person Transformation
+  - Ground in clinical excellence
 welcome:
   eyebrow: We are so glad you are here
-  title: Are you ready to to begin a journey towards healing and empowerment?
+  title: Are you ready to to begin a journey towards healing and growth?
   body: |
     Maybe you are carrying anxiety that never fully turns off. Maybe past experiences or trauma still shape your relationships, your body, or your sense of safety. Or maybe life simply looks fine from the outside while everything inside feels heavy and tangled.
 
