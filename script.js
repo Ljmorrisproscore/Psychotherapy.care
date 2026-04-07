@@ -474,6 +474,21 @@ const renderers = {
   contact: renderContact,
 };
 
+const scrollToHashTarget = () => {
+  const { hash } = window.location;
+  if (!hash || hash === "#") {
+    return;
+  }
+
+  const targetId = decodeURIComponent(hash.slice(1));
+  const target = document.getElementById(targetId);
+  if (!target) {
+    return;
+  }
+
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 const loadPageContent = async () => {
   const root = document.querySelector("#main-content");
   if (!root) {
@@ -495,6 +510,14 @@ const loadPageContent = async () => {
     const raw = await response.text();
     const data = parseFrontmatter(raw);
     root.innerHTML = render(data);
+
+    // Hash targets (like #faq) are injected by JS, so perform the jump
+    // after the page content is rendered on first load.
+    if (page === "home") {
+      requestAnimationFrame(() => {
+        scrollToHashTarget();
+      });
+    }
   } catch (error) {
     console.error(error);
     root.innerHTML = "<section class='section'><div class='container'><div class='card'>Content failed to load. Check your Markdown files.</div></div></section>";
