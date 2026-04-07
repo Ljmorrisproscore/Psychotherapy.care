@@ -9,8 +9,9 @@ hero:
   secondaryCtaHref: /approach
 marquee:
   - Personalized
+  - Empowering
   - Whole-Person Transformation
-  - Ground in Clinical Excellence
+  - Grounded in Clinical Excellence
 welcome:
   eyebrow: We are so glad you are here
   title: Are you ready to to begin a journey towards healing and growth?
