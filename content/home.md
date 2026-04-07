@@ -2,8 +2,7 @@
 hero:
   eyebrow: San Marcos, California
   title: Compassionate Care for Mind, Body & Spirit
-  intro: |
-    Holistic Healing Psychotherapy supports adults, teens and couples with an integrative approach that blend evidence-based approaches while honoring mind, body, relationships, and the deeper patterns beneath what hurts.
+  intro: An integrative and deeply supportive approach that blends evidence-based practices with holistic modalities to support emotional, physical, mental, and spiritual healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
   secondaryCtaText: Learn About the Approach
