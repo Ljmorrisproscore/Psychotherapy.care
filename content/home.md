@@ -2,7 +2,7 @@
 hero:
   eyebrow: San Marcos, California
   title: Compassionate Care for Mind, Body & Spirit
-  intro: An integrative and deeply supportive approach that blends evidence-based practices with holistic modalities to support emotional, physical, mental, and spiritual healing.
+  intro: An integrative and deeply supportive approach that blends evidence-based practices with holistic modalities to support mental, physical, spiritual, and emotional healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
   secondaryCtaText: Learn About the Approach
