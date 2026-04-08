@@ -12,7 +12,7 @@ form:
   buttonText: Send Inquiry
   note: .
 details:
-  title: Holistice Healing Psychotherapy
+  title: Holistic Healing Psychotherapy
   location: 338 Via Vera Cruz, Suite 260, San Marcos, CA 92078
   email: info@psychotherapy.care
   phone: "(760) 454-7249"
