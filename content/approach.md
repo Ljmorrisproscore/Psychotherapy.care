@@ -1,11 +1,11 @@
 ---
 hero:
-  eyebrow: The Holistict Psychotherapy Method
+  eyebrow: The Holistic Psychotherapy Method
   title: Your journey to optimal well-being starts here, and we're here to support you every step of the way.
   primaryCtaText: Start Your Therapy Journey
   primaryCtaHref: /contact
 sectionOne:
-  title: New to Holisitic Healing Therapy? Perfect! Start Here!
+  title: New to Holistic Healing Therapy? Perfect! Start Here!
   body: |
     Holistic therapy goes beyond talk therapy by integrating mind, body, and spirit. Using tools like EMDR, CBT, mindfulness, breathwork, and energy healing helps reduce stress, release trauma, and promote deep emotional and spiritual healing. By treating root causes, not just symptoms, it supports lasting transformation and growth.
   imageSrc: assets/couplestherapy.png
