@@ -1,11 +1,11 @@
 ---
 hero:
   eyebrow: Frequently Asked Questions
-  title: Answers to common questions before you begin.
+  title: Before you begin, answers to common questions.
   intro: Find quick, clear details about scheduling, sessions, location, telehealth, payment, insurance, and confidentiality.
 faq:
   eyebrow: FAQ
-  title: Common questions and answers
+  title: Common Questions and Answers
   items:
     - question: Do I need counseling/therapy?
       answer: Deciding to start psychotherapy is personal, and having someone in your corner can help you process trauma, major life transitions, relationship or work stress, difficult decisions, and feelings of being overwhelmed, unhappy, or stuck.
