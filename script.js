@@ -45,8 +45,6 @@ const renderHome = (data) => {
   const midpoint = Math.ceil(reasonItems.length / 2);
   const reasonLeft = reasonItems.slice(0, midpoint);
   const reasonRight = reasonItems.slice(midpoint);
-  const faq = data.faq ?? {};
-  const faqItems = Array.isArray(faq.items) ? faq.items : [];
   const cta = data.cta ?? {};
 
   const renderReason = (item) => `
@@ -154,7 +152,37 @@ const renderHome = (data) => {
       </div>
     </section>
 
-    <section id='faq' class='section compact'>
+    <section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <div class='eyebrow'>${escapeHtml(cta.eyebrow)}</div>
+          <h2>${escapeHtml(cta.title)}</h2>
+          <p>${escapeHtml(cta.body)}</p>
+          <div class='hero-actions'>
+            <a class='btn' href='${escapeHtml(cta.primaryCtaHref)}'>${escapeHtml(cta.primaryCtaText)}</a>
+            <a class='btn secondary' href='${escapeHtml(cta.secondaryCtaHref)}'>${escapeHtml(cta.secondaryCtaText)}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+};
+
+const renderFaq = (data) => {
+  const hero = data.hero ?? {};
+  const faq = data.faq ?? {};
+  const faqItems = Array.isArray(faq.items) ? faq.items : [];
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        <p>${escapeHtml(hero.intro)}</p>
+      </div>
+    </section>
+
+    <section class='section compact'>
       <div class='container'>
         <div class='eyebrow'>${escapeHtml(faq.eyebrow)}</div>
         <h2>${escapeHtml(faq.title)}</h2>
@@ -168,20 +196,6 @@ const renderHome = (data) => {
             </article>`
             )
             .join("")}
-        </div>
-      </div>
-    </section>
-
-    <section class='section'>
-      <div class='container'>
-        <div class='cta'>
-          <div class='eyebrow'>${escapeHtml(cta.eyebrow)}</div>
-          <h2>${escapeHtml(cta.title)}</h2>
-          <p>${escapeHtml(cta.body)}</p>
-          <div class='hero-actions'>
-            <a class='btn' href='${escapeHtml(cta.primaryCtaHref)}'>${escapeHtml(cta.primaryCtaText)}</a>
-            <a class='btn secondary' href='${escapeHtml(cta.secondaryCtaHref)}'>${escapeHtml(cta.secondaryCtaText)}</a>
-          </div>
         </div>
       </div>
     </section>
@@ -467,26 +481,12 @@ const renderContact = (data) => {
 
 const renderers = {
   home: renderHome,
+  faq: renderFaq,
   approach: renderApproach,
   services: renderServices,
   specialties: renderSpecialties,
   about: renderAbout,
   contact: renderContact,
-};
-
-const scrollToHashTarget = () => {
-  const { hash } = window.location;
-  if (!hash || hash === "#") {
-    return;
-  }
-
-  const targetId = decodeURIComponent(hash.slice(1));
-  const target = document.getElementById(targetId);
-  if (!target) {
-    return;
-  }
-
-  target.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
 const loadPageContent = async () => {
@@ -510,14 +510,6 @@ const loadPageContent = async () => {
     const raw = await response.text();
     const data = parseFrontmatter(raw);
     root.innerHTML = render(data);
-
-    // Hash targets (like #faq) are injected by JS, so perform the jump
-    // after the page content is rendered on first load.
-    if (page === "home") {
-      requestAnimationFrame(() => {
-        scrollToHashTarget();
-      });
-    }
   } catch (error) {
     console.error(error);
     root.innerHTML = "<section class='section'><div class='container'><div class='card'>Content failed to load. Check your Markdown files.</div></div></section>";

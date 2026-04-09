@@ -90,18 +90,6 @@ collections:
                   - { label: "Number", name: "number", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
-          - label: "FAQ"
-            name: "faq"
-            widget: "object"
-            fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Question", name: "question", widget: "string" }
-                  - { label: "Answer", name: "answer", widget: "text" }
           - label: "CTA"
             name: "cta"
             widget: "object"
@@ -222,6 +210,30 @@ collections:
               - { label: "Body", name: "body", widget: "text" }
               - { label: "Primary CTA Text", name: "primaryCtaText", widget: "string" }
               - { label: "Primary CTA Href", name: "primaryCtaHref", widget: "string" }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "content/faq.md"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
 
       - name: "about"
         label: "About"
