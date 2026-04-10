@@ -50,14 +50,13 @@ howItWorks:
 services:
   eyebrow: Find support
   title: Therapy services
-  note: 
+  cards:
     - title: Individual Therapy
       description: Personalized sessions to support emotional well-being, heal trauma,  reduce distress, and create meaningful growth
     - title: Teen Therapy
       description: Age-appropriate support for younger clients navigating emotions, school stress, identity, or family transitions.
     - title: Couples Therapy
-      description: Guidance for partners working on communication, trust, connection, and healthier conflict 
-      patterns.
+      description: Guidance for partners working on communication, trust, connection, and healthier conflict patterns.
     - title: EMDR
       description: Eye Movement Desensitization and Reprocessing (EMDR) is a psychotherapy approach that helps people process and heal from traumatic or distressing memories by using guided bilateral stimulation, such as eye movements. 
 reasons:
