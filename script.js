@@ -257,7 +257,7 @@ const renderApproach = (data) => {
       <div class='container'>
         <div class='eyebrow'>${escapeHtml(process.eyebrow)}</div>
         ${process.title ? `<h2>${escapeHtml(process.title)}</h2>` : ""}
-        <div class='grid-3'>
+        <div class='approach-steps'>
           ${steps
             .map(
               (step) => `
