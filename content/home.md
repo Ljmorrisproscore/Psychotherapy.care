@@ -78,6 +78,9 @@ reasons:
     - number: 5
       title: Designed for long-term change
       description: The work aims beyond temporary relief so you can feel more anchored in yourself over time.
+    - number: 6
+      title: Evidence-based approaches
+      description: Your therapist will help determine the best approaches to lead you on your healing journey.
 cta:
   eyebrow: Ready when you are
   title: You do not have to navigate this alone.
