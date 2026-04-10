@@ -9,15 +9,7 @@ faq:
   items:
     - question: Do I need counseling/therapy?
       answer: |
-        Deciding to start psychotherapy is a personal choice.
-
-        Life if full of both trials and sparkling moments. Having someone in your corner to provide empathy, understanding, support, help, hope and healing can make all the difference in learning to live your life to its fullest.
-
-        If you've been through a life altering trauma and are struggling to get past the strong feelings and thoughts, therapy can help. If your world has been turned upside down due to divorce, empty nest, a shocking diagnosis, etc., therapy provides a safe space to explore and process your feelings, gain insight and take action to feel whole again.
-
-        You may benefit from therapy if you are feeling unhappy, overwhelmed, or stuck, or if you are experiencing challenges in your relationships, work, or personal life. Therapy is not only helpful during life transitions such as changes in relationships, employment, or family dynamics, but when grappling with a difficult decision or an existential crisis.
-
-        If you answered "yes" to any of these experiences, participating in psychotherapy is an excellent choice to positively support your mental and emotional well-being.
+        Deciding to start psychotherapy is a personal choice. Life if full of both trials and sparkling moments. Having someone in your corner to provide empathy, understanding, support, help, hope and healing can make all the difference in learning to live your life to its fullest.  If you've been through a life altering trauma and are struggling to get past the strong feelings and thoughts, therapy can help. If your world has been turned upside down due to divorce, empty nest, a shocking diagnosis, etc., therapy provides a safe space to explore and process your feelings, gain insight and take action to feel whole again.  You may benefit from therapy if you are feeling unhappy, overwhelmed, or stuck, or if you are experiencing challenges in your relationships, work, or personal life. Therapy is not only helpful during life transitions such as changes in relationships, employment, or family dynamics, but when grappling with a difficult decision or an existential crisis.  If you answered "yes" to any of these experiences, participating in psychotherapy is an excellent choice to positively support your mental and emotional well-being.
     - question: How do I schedule a therapy appointment?
       answer: You can call or text `(760) 454-7249`, send a message through the website, or email `info@psychotherapy.care`; if you leave voicemail, include your name and phone number for a return call.
     - question: What are therapy sessions like?
