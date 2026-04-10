@@ -22,7 +22,10 @@ process:
       description: In phase 2, your curated therapist is taking you through our unique therapeutic process, which generally consists of weekly appointments that match your specific goals and empower you to take action. You will continue to grow in this phase until you meet the milestones and achieve the goals that you have set with your therapist.
     - step: ""
       title: Phase 3
-      description: In phase 3, we move you into maintenance, where we continue to empower you, keep you accountable, and encourage you to continue down a path of personal development. You will continue in this phase until you are ready to complete your treatment with us.
+      description: In phase 3, we focus on integration and real-life application. You and your therapist strengthen the tools and insights you've built so far, practice using them in everyday situations, and fine-tune what is working best for your needs. This phase helps you feel steady, confident, and prepared for longer-term progress.
+    - step: ""
+      title: Phase 4
+      description: In phase 4, we move you into maintenance, where we continue to empower you, keep you accountable, and encourage you to continue down a path of personal development. You will continue in this phase until you are ready to complete your treatment with us.
 note: "*To get the most out of your therapeutic experience, we begin by scheduling you out for 12 weeks of sessions to ensure you have the opportunity to move through each phase. The entire therapeutic process can take anywhere from 12 weeks to 6 months to an entire year to several years. The length of time is different for every client, and it is determined specifically by you and your therapist.*"
 cta:
   title: Ready to live a life you've always dreamed of?
