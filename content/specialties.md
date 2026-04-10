@@ -12,6 +12,8 @@ specialties:
     description: Trauma-informed care that prioritizes safety, pacing, and nervous system regulation throughout treatment. EMDR is a highly effective approach to traume, but we tailor the treatment to your specific needs and situation.
   - title: Grief and Loss
     description: Grief and loss therapy provides a compassionate space to process the complex emotions that follow the death of a loved one, end of life,  or other significant life changes. Through gentle guidance, clients are supported in expressing their feelings, making sense of their experience, and honoring their unique journey of healing. Therapy can help individuals navigate waves of sadness, confusion, or even numbness, while gradually finding ways to integrate the loss, rediscover meaning, and move forward with a renewed sense of connection and purpose.
+  - title: Gottman-Informed Couples Counseling
+    description: Grounded in the research-based Gottman Method, couples counseling provides practical tools to strengthen communication, deepen emotional connection, and navigate conflict in healthier ways. Through structured, evidence-based techniques, couples learn to build trust, manage disagreements constructively, and foster lasting intimacy-helping their relationship feel more secure, supportive, and resilient over time.
 cta:
   title: Not sure where to start?
   body: Reach out and we can help determine the best therapeutic path for your needs.
