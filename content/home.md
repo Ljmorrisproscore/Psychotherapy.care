@@ -1,7 +1,7 @@
 ---
 hero:
   eyebrow: 
-  title: Integrative Care for Truama, Stress & Anxiety and Grief & Loss.
+  title: Integrative Care for Stress & Anxiety, Trauma, Grief & Loss.
   intro: An integrative and supportive approach that blends evidence-based practices with holistic modalities to support mental, physical, spiritual, and emotional healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
