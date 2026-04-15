@@ -1,7 +1,7 @@
 ---
 hero:
   eyebrow: 
-  title: Compassionate Care for Mind, Body & Spirit
+  title: Compassionate Care for Truama, Anxiety, Grief & Loss, and Couples.
   intro: An integrative and deeply supportive approach that blends evidence-based practices with holistic modalities to support mental, physical, spiritual, and emotional healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
