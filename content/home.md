@@ -1,8 +1,8 @@
 ---
 hero:
   eyebrow: 
-  title: Compassionate Care for Truama, Anxiety, Grief & Loss, and Couples.
-  intro: An integrative and deeply supportive approach that blends evidence-based practices with holistic modalities to support mental, physical, spiritual, and emotional healing.
+  title: Integrative Care for Truama, Stress & Anxiety and Grief & Loss.
+  intro: An integrative and supportive approach that blends evidence-based practices with holistic modalities to support mental, physical, spiritual, and emotional healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
   secondaryCtaText: Learn About the Approach
