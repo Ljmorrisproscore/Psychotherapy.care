@@ -134,6 +134,9 @@ p { margin: 0 0 16px; color: var(--muted); }
   border-radius: 28px;
   box-shadow: var(--shadow);
 }
+.hero h1 {
+  font-size: clamp(2rem, 3.9vw, 3.7rem);
+}
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 .marquee {
   border-top: 1px solid var(--line);
