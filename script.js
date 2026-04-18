@@ -1,11 +1,111 @@
 import { load as parseYaml } from "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/+esm";
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js";
 
-const toggle = document.querySelector(".menu-toggle");
-const links = document.querySelector(".nav-links");
-if (toggle && links) {
-  toggle.addEventListener("click", () => links.classList.toggle("show"));
-}
+const specialtyMenuItems = [
+  { label: "Trauma", href: "/specialties-trauma" },
+  { label: "EMDR", href: "/specialties-emdr" },
+  { label: "Stress & Anxiety", href: "/specialties-stress-anxiety" },
+  { label: "Depression", href: "/specialties-depression" },
+  { label: "Grief & Loss", href: "/specialties-grief-loss" },
+  { label: "Couples", href: "/specialties-couples" },
+  { label: "Somatic Therapy", href: "/specialties-somatic-therapy" },
+  { label: "Divorce", href: "/specialties-divorce" },
+];
+
+const normalizePath = (path) => {
+  const sanitized = String(path ?? "").replace(/\/+$/, "");
+  if (!sanitized || sanitized === "/index" || sanitized === "/index.html") {
+    return "/";
+  }
+  return sanitized.replace(/\.html$/, "");
+};
+
+const initSpecialtiesSubmenu = () => {
+  const navLinks = document.querySelector(".nav-links");
+  if (!navLinks) {
+    return;
+  }
+
+  const specialtiesLink = navLinks.querySelector("a[href='/specialties'], a[href='/specialties/']");
+  if (!specialtiesLink) {
+    return;
+  }
+
+  const currentPath = normalizePath(window.location.pathname);
+  const isSpecialtyPage = specialtyMenuItems.some((item) => normalizePath(item.href) === currentPath);
+  const isSpecialtiesOverview = currentPath === "/specialties";
+
+  const dropdown = document.createElement("div");
+  dropdown.className = "nav-dropdown";
+  if (specialtiesLink.classList.contains("active") || isSpecialtyPage || isSpecialtiesOverview) {
+    dropdown.classList.add("is-active");
+  }
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "nav-dropdown-toggle";
+  toggle.textContent = "Specialties";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Toggle specialties menu");
+
+  const menu = document.createElement("div");
+  menu.className = "nav-submenu";
+
+  specialtyMenuItems.forEach((item) => {
+    const link = document.createElement("a");
+    link.href = item.href;
+    link.textContent = item.label;
+    if (normalizePath(item.href) === currentPath) {
+      link.classList.add("active");
+      toggle.setAttribute("aria-current", "page");
+    }
+    menu.append(link);
+  });
+
+  const setOpen = (open) => {
+    dropdown.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setOpen(!dropdown.classList.contains("open"));
+  });
+
+  dropdown.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!dropdown.contains(event.target)) {
+      setOpen(false);
+    }
+  });
+
+  menu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setOpen(false);
+    }
+  });
+
+  dropdown.append(toggle, menu);
+  specialtiesLink.replaceWith(dropdown);
+};
+
+const initMainMenu = () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const links = document.querySelector(".nav-links");
+  if (toggle && links) {
+    toggle.addEventListener("click", () => links.classList.toggle("show"));
+  }
+};
+
+initSpecialtiesSubmenu();
+initMainMenu();
 
 marked.setOptions({ breaks: true });
 
@@ -371,6 +471,11 @@ const renderSpecialties = (data) => {
           <article class='card'>
             <h2>${escapeHtml(item.title)}</h2>
             <p>${escapeHtml(item.description)}</p>
+            ${
+              item.href
+                ? `<a class='btn secondary specialty-link' href='${escapeHtml(item.href)}'>${escapeHtml(item.linkText || "Learn more")}</a>`
+                : ""
+            }
           </article>`
           )
           .join("")}
@@ -388,6 +493,49 @@ const renderSpecialties = (data) => {
         </div>
       </div>
     </section>
+  `;
+};
+
+const renderSpecialtyPage = (data) => {
+  const hero = data.hero ?? {};
+  const approach = data.approach ?? {};
+  const cta = data.cta ?? {};
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        <p>${escapeHtml(hero.intro)}</p>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container'>
+        <article class='card specialty-approach'>
+          ${approach.title ? `<h2>${escapeHtml(approach.title)}</h2>` : ""}
+          ${approach.body ? md(approach.body) : "<p>We will add detailed information about this specialty soon.</p>"}
+        </article>
+      </div>
+    </section>
+
+    ${
+      cta.title
+        ? `<section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <h2>${escapeHtml(cta.title)}</h2>
+          ${cta.body ? `<p>${escapeHtml(cta.body)}</p>` : ""}
+          ${
+            cta.primaryCtaText && cta.primaryCtaHref
+              ? `<div class='hero-actions'><a class='btn' href='${escapeHtml(cta.primaryCtaHref)}'>${escapeHtml(cta.primaryCtaText)}</a></div>`
+              : ""
+          }
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
   `;
 };
 
@@ -485,6 +633,14 @@ const renderers = {
   approach: renderApproach,
   services: renderServices,
   specialties: renderSpecialties,
+  "specialties-trauma": renderSpecialtyPage,
+  "specialties-emdr": renderSpecialtyPage,
+  "specialties-stress-anxiety": renderSpecialtyPage,
+  "specialties-depression": renderSpecialtyPage,
+  "specialties-grief-loss": renderSpecialtyPage,
+  "specialties-couples": renderSpecialtyPage,
+  "specialties-somatic-therapy": renderSpecialtyPage,
+  "specialties-divorce": renderSpecialtyPage,
   about: renderAbout,
   contact: renderContact,
 };

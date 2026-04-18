@@ -99,6 +99,66 @@ p { margin: 0 0 16px; color: var(--muted); }
 .nav-links { display: flex; align-items: center; gap: 22px; }
 .nav-links a { color: var(--muted); font-size: .98rem; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: .98rem;
+  cursor: pointer;
+}
+.nav-dropdown-toggle::after {
+  content: "▾";
+  font-size: .7rem;
+  line-height: 1;
+}
+.nav-dropdown.is-active .nav-dropdown-toggle,
+.nav-dropdown-toggle:hover {
+  color: var(--text);
+}
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 230px;
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 253, 250, 0.98);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 5;
+}
+.nav-submenu a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--muted);
+}
+.nav-submenu a:hover,
+.nav-submenu a.active {
+  color: var(--text);
+  background: #f1ece3;
+}
+.nav-dropdown:hover .nav-submenu,
+.nav-dropdown.open .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 .menu-toggle { display: none; }
 .hero {
   min-height: 88vh;
@@ -204,6 +264,9 @@ p { margin: 0 0 16px; color: var(--muted); }
   min-height: 290px;
   height: 100%;
 }
+.specialty-link {
+  margin-top: 10px;
+}
 .approach-pillars .card img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -280,6 +343,20 @@ p { margin: 0 0 16px; color: var(--muted); }
   position: relative;
   z-index: 1;
 }
+.specialty-detail-page .page-hero {
+  position: relative;
+  background: url('assets/hero4.png') center/cover no-repeat;
+}
+.specialty-detail-page .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(247, 245, 242, 0.62), rgba(247, 245, 242, 0.55));
+}
+.specialty-detail-page .page-hero .container {
+  position: relative;
+  z-index: 1;
+}
 .faq-page .page-hero {
   position: relative;
   background: url('assets/herofaq.png') center/cover no-repeat;
@@ -331,6 +408,42 @@ textarea { min-height: 140px; resize: vertical; }
     align-items: flex-start;
   }
   .nav-links.show { display: flex; }
+  .nav-dropdown {
+    width: 100%;
+    display: grid;
+    justify-items: start;
+  }
+  .nav-dropdown .nav-submenu {
+    display: none;
+    position: static;
+    min-width: 0;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding: 6px 0 0 12px;
+  }
+  .nav-dropdown.open .nav-submenu {
+    display: grid;
+  }
+  .nav-dropdown:hover .nav-submenu {
+    display: none;
+  }
+  .nav-dropdown.open:hover .nav-submenu {
+    display: grid;
+  }
+  .nav-submenu a {
+    padding: 6px 0;
+    border-radius: 0;
+  }
+  .nav-submenu a:hover,
+  .nav-submenu a.active {
+    background: transparent;
+  }
   .menu-toggle {
     display: inline-flex;
     background: transparent;
