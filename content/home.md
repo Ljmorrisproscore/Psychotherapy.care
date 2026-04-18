@@ -27,7 +27,7 @@ approachIntro:
   eyebrow: What is the Holistic Healing Approach?
   title: Evidence based approaches and whole-person care that honor the full story, not just the symptoms.
   body: |
-    The Holistic Healing Approach recognizes that emotional pain is rarely one-dimensional. We work with thoughts, nervous system responses, relationship patterns, beliefs, and lived experience so therapy supports the whole person.
+    The Holistic Healing Approach recognizes that emotional pain is rarely one-dimensional. We work with thoughts, feelings, nervous system responses, relationship patterns, beliefs, and lived experience so therapy supports the whole person.
 
     This means blending evidence-based care with body awareness, mindfulness, and deeply personalized treatment that helps you feel safer, clearer, and more empowered over time.
   buttonText: Learn More
