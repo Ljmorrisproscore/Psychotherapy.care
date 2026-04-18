@@ -25,7 +25,7 @@ welcome:
   imageAlt: Trauma, Anxiety, Grief and Loss, Change of Life
 approachIntro:
   eyebrow: What is the Holistic Healing Approach?
-  title: Evidence based approaches that honors the full story, not just the symptoms.
+  title: A method that goes beyond talk therapy by integrating mind, body and spirit.
   body: |
     The Holistic Healing Approach recognizes that emotional pain is rarely one-dimensional. We work with thoughts, nervous system responses, relationship patterns, beliefs, and lived experience so therapy supports the whole person.
 
