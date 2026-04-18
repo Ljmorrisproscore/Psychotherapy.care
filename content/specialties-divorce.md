@@ -6,9 +6,7 @@ hero:
 approach:
   title: Our Approach to Divorce Support
   body: |
-    Divorce can bring a mix of grief, uncertainty, relief, and stress. Therapy offers a grounded space to process emotions and make thoughtful decisions during a major life transition.
-
-    We focus on emotional support, boundary-setting, coping tools, and rebuilding confidence so you can move forward with greater clarity and stability.
+    Divorce often brings a complex mix of grief, uncertainty, stress, and major identity shifts, and therapy provides a grounded space to process emotions while making clear, thoughtful decisions. We focus on emotional support, boundary-setting, practical coping tools, and confidence-building so you can move through this transition with greater clarity, stability, and self-trust.
 cta:
   title: Moving through a divorce?
   body: We are here to support you with practical and compassionate care.

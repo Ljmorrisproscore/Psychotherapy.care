@@ -6,9 +6,7 @@ hero:
 approach:
   title: Our Approach to Couples Therapy
   body: |
-    Couples work focuses on understanding conflict patterns, deepening empathy, and building healthier communication habits. Sessions are structured to create emotional safety for both partners.
-
-    We help couples develop practical tools for navigating disagreements, rebuilding connection, and creating a more resilient partnership over time.
+    Couples therapy focuses on identifying negative interaction cycles, improving communication, and helping each partner feel heard, respected, and emotionally safer in the relationship. Sessions are practical and structured, with tools for navigating conflict, rebuilding trust, and strengthening connection so your relationship can become more resilient over time.
 cta:
   title: Ready to strengthen your relationship?
   body: Reach out and we can discuss whether couples therapy is the next right step.

@@ -6,9 +6,7 @@ hero:
 approach:
   title: Our Approach to Somatic Therapy
   body: |
-    Somatic therapy helps you notice and work with how stress and trauma are held in the body. We integrate gentle awareness practices to support regulation, grounding, and self-connection.
-
-    This work can be especially helpful when talking alone does not fully shift symptoms, offering additional pathways for relief and long-term healing.
+    Somatic therapy helps you work with how stress and trauma are held in the body by integrating gentle awareness, grounding, and nervous system regulation into the therapeutic process. This approach can be especially helpful when insight alone is not enough, offering additional pathways for emotional release, deeper self-connection, and lasting relief.
 cta:
   title: Curious about somatic therapy?
   body: Contact us to explore whether a body-centered approach fits your treatment goals.

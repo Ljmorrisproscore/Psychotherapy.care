@@ -6,9 +6,7 @@ hero:
 approach:
   title: Our Approach to Trauma Therapy
   body: |
-    We provide trauma-informed care that prioritizes emotional safety, trust, and pace. Sessions are tailored to your needs so we can build stabilization first, then gradually process what feels ready.
-
-    Depending on your goals, treatment may include grounding tools, mindfulness, parts work, and evidence-based trauma modalities to help reduce symptoms and support long-term healing.
+    We provide trauma-informed therapy that prioritizes emotional safety, trust, and your pace, beginning with stabilization and grounding before moving into deeper processing when you feel ready. Your care plan is tailored to your goals and may integrate evidence-based trauma modalities, mindfulness, and practical regulation tools that help reduce distress, restore a sense of safety, and support long-term healing.
 cta:
   title: Ready to begin your healing work?
   body: Reach out to schedule a consultation and discuss whether trauma-focused therapy is the right fit for you.
