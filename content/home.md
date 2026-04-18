@@ -18,11 +18,11 @@ welcome:
   body: |
     Maybe you are carrying anxiety that never fully turns off. Maybe past experiences or trauma still shape your relationships, your body, or your sense of safety. Or maybe life simply looks fine from the outside while everything inside feels heavy and tangled.
 
-    Therapy here is designed to empower you towards lasting change with practical support.
+    Our approach is designed to empower you towards lasting change with practical support, encouragement, and whole-person care.
   buttonText: Explore Specialties
   buttonHref: /specialties
   imageSrc: assets/therapist1.png
-  imageAlt: Traume, Anxiety, Grief and Loss, Change of Life
+  imageAlt: Trauma, Anxiety, Grief and Loss, Change of Life
 approachIntro:
   eyebrow: What is the Holistic Healing Approach?
   title: Evidence based approaches that honors the full story, not just the symptoms.
@@ -61,7 +61,7 @@ services:
       description: Eye Movement Desensitization and Reprocessing (EMDR) is a psychotherapy approach that helps people process and heal from traumatic or distressing memories by using guided bilateral stimulation, such as eye movements. 
 reasons:
   eyebrow: Why clients choose this practice
-  title: Your are unique, our integrative approach uses the best methods applicable to your situation..
+  title: You are unique, our integrative approach uses the best methods applicable to your situation.
   items:
     - number: 1
       title: Whole-person care
