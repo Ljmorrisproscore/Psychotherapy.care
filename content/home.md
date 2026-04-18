@@ -29,7 +29,7 @@ approachIntro:
   body: |
     The Holistic Healing Approach recognizes that emotional pain is rarely one-dimensional. We work with thoughts, feelings, nervous system responses, relationship patterns, beliefs, and lived experience so therapy supports the whole person.
 
-    This means blending evidence-based care with body awareness, mindfulness, and deeply personalized treatment that helps you feel safer, clearer, and more empowered over time.
+    This means blending evidence-based care with body awareness, mindfulness practices, subconscious healing tools, and a deeply personalized treatment plan designed to help you feel safer, clearer, and more empowered over time.
   buttonText: Learn More
   buttonHref: /approach
   imageSrc: assets/darlene3.png
