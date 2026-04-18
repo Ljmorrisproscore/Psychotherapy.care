@@ -1,7 +1,7 @@
 ---
 hero:
   eyebrow: 
-  title: Compassionate care for real transformation and lasting change.
+  title: Compassionate Care for Real Transformation and Lasting Change.
   intro: An integrative and supportive approach that blends evidence-based practices with subconscious and somatic tools that support mental, physical and emotional healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
