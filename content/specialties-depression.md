@@ -6,6 +6,8 @@ hero:
 approach:
   title: Our Approach to Depression
   body: |
+    ## Depression Therapy
+
     Depression can affect energy, motivation, self-worth, and connection, so our work focuses on steady, realistic steps that support both emotional healing and day-to-day functioning. Your treatment plan is tailored to your values and may include insight-oriented therapy, behavioral activation, practical coping tools, and whole-person care designed to help you reconnect with meaning, momentum, and hope.
 cta:
   title: You do not have to navigate this alone

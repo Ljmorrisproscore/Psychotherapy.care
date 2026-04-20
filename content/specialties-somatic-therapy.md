@@ -6,6 +6,8 @@ hero:
 approach:
   title: Our Approach to Somatic Therapy
   body: |
+    ## Somatic Therapy
+
     Somatic therapy helps you work with how stress and trauma are held in the body by integrating gentle awareness, grounding, and nervous system regulation into the therapeutic process. This approach can be especially helpful when insight alone is not enough, offering additional pathways for emotional release, deeper self-connection, and lasting relief.
 cta:
   title: Curious about somatic therapy?

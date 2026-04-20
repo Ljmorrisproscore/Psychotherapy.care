@@ -40,6 +40,8 @@ approach:
     - Resolving Relationship Difficulties: Attachment-focused EMDR addresses unmet developmental needs caused by neglect or abuse, fostering healthier relationships.
     - Trauma Recovery: Effective for both major traumatic events (big “T” trauma) like accidents and assaults, and chronic, ongoing stressors (small “t” trauma) such as interpersonal conflicts and financial stress. The cumulative effect of multiple small “t” traumas can lead to significant emotional distress.
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bIJZQAr9nQo?si=vVajoIvzDv7ICEkS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     ## Take the First Step Toward Healing
 
     To see if EMDR is a good fit for you, please schedule a 20-minute free consultation.
