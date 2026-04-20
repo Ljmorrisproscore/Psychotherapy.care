@@ -40,11 +40,6 @@ approach:
     - Resolving Relationship Difficulties: Attachment-focused EMDR addresses unmet developmental needs caused by neglect or abuse, fostering healthier relationships.
     - Trauma Recovery: Effective for both major traumatic events (big “T” trauma) like accidents and assaults, and chronic, ongoing stressors (small “t” trauma) such as interpersonal conflicts and financial stress. The cumulative effect of multiple small “t” traumas can lead to significant emotional distress.
 
-    ## Certified EMDR Therapist
-
-    As a certified EMDR therapist, I have completed extensive training and advanced certification requirements, ensuring high standards of practice. My approach integrates ego state work, polyvagal theory, and attachment principles to provide comprehensive care. I am an active member of EMDRIA, the professional association for EMDR practitioners, committed to maintaining the highest standards in clinical use.
-    I am also committed to continually expanding my knowledge and skills through ongoing classes and trainings. This dedication ensures that my clients receive the most up-to-date, effective care possible.
-
     ## Take the First Step Toward Healing
 
     To see if EMDR is a good fit for you, please schedule a 20-minute free consultation.
