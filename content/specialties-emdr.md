@@ -4,7 +4,7 @@ hero:
   title: EMDR Therapy
   intro: EMDR helps reduce the emotional intensity of painful memories so you can move forward with greater ease and clarity.
 approach:
-  title: Our Approach to EMDR
+  title: EMDR
   body: |
     ## Understanding Eye Movement Desensitization & Reprocessing
 

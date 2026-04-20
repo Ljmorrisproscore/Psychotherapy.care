@@ -4,10 +4,8 @@ hero:
   title: Grief & Loss Therapy
   intro: Gentle support for navigating the emotional, relational, and identity shifts that come with meaningful loss.
 approach:
-  title: Our Approach to Grief & Loss
+  title:  Grief & Loss Therapy
   body: |
-    ## Grief & Loss Therapy
-
     ## Understanding Depression Beyond Mood
 
     Depression is more than feeling sad - it can affect how people think, feel, and move through daily life. It may show up as low energy, loss of motivation, disconnection, or a persistent sense of heaviness. Even simple tasks can begin to feel overwhelming, and it can be difficult to understand why.

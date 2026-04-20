@@ -4,10 +4,8 @@ hero:
   title: Somatic Therapy
   intro: Body-centered therapy that supports nervous system regulation, emotional release, and deeper mind-body healing.
 approach:
-  title: Our Approach to Somatic Therapy
+  title: Somatic Therapy
   body: |
-    ## Somatic Therapy
-
     ## Why Somatic Therapy for Stress and Anxiety?
 
     Stress and anxiety are not just thoughts - they live in the body. Tightness in the chest, a racing heart, restlessness, or a sense of shutdown can all be signs that the nervous system is activated. Somatic therapy focuses on working with these physical experiences, not only talking about them.

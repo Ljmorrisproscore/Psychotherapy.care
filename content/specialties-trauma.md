@@ -4,10 +4,8 @@ hero:
   title: Trauma Therapy
   intro: Compassionate, trauma-informed therapy designed to help you feel safer in your body, relationships, and daily life.
 approach:
-  title: Our Approach to Trauma Therapy
+  title: Trauma Therapy
   body: |
-    ## Trauma Therapy
-
     ## Does It Feel Like Your Life Is Dictated By Your Past?
 
     Have you ever found yourself at a loss for the out-of-character way you’re acting, with no explanation for your behavior?

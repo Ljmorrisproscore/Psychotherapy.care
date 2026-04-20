@@ -4,10 +4,8 @@ hero:
   title: Divorce Support Therapy
   intro: Supportive therapy for navigating separation, grief, identity changes, and the transition into your next chapter.
 approach:
-  title: Our Approach to Divorce Support
+  title: Divorce Support Therapy
   body: |
-    ## Divorce Support Therapy
-
     ## Navigating a Major Emotional Transition
 
     Divorce is more than a legal process - it is a significant emotional transition. It often brings a mix of stress, grief, uncertainty, and major life changes. Even when the decision feels necessary, the impact can be overwhelming and difficult to navigate alone.

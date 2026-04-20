@@ -4,10 +4,8 @@ hero:
   title: Stress & Anxiety Therapy
   intro: Support for calming overwhelm, reducing anxious patterns, and strengthening resilience in everyday life.
 approach:
-  title: Our Approach to Stress & Anxiety
+  title: Stress & Anxiety Therapy
   body: |
-    ## Stress & Anxiety Therapy
-
     ## Do Reactions Feel Overwhelming or Hard to Explain?
 
     Do reactions sometimes feel intense, confusing, or out of proportion to what is happening in the moment? Stress and anxiety can show up in patterns that do not seem logical at first glance. These experiences are not random - they are often the nervous system doing exactly what it learned to do to protect against perceived threat.

@@ -4,10 +4,8 @@ hero:
   title: Couples Therapy
   intro: Relationship-focused support to improve communication, repair trust, and strengthen emotional connection.
 approach:
-  title: Our Approach to Couples Therapy
+  title: Couples Therapy
   body: |
-    ## Couples Therapy
-
     ## Why Relationships Feel Stuck
 
     Relationships can be one of the greatest sources of connection - and also one of the greatest sources of stress. When communication breaks down, conflicts repeat, or emotional distance grows, it can feel difficult to find a way back to each other.
