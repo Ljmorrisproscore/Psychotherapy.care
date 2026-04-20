@@ -508,13 +508,14 @@ const renderSpecialties = (data) => {
     </section>
 
     <section class='section compact'>
-      <div class='container grid-2 services-primary-grid'>
+      <div class='container'>
+        <div class='specialties-list'>
         ${specialties
           .map(
             (item) => `
-          <article class='card'>
+          <article class='card specialty-item'>
             <h2>${escapeHtml(item.title)}</h2>
-            <p>${escapeHtml(item.description)}</p>
+            <div class='specialty-copy'>${md(item.description)}</div>
             ${
               item.href
                 ? `<a class='btn secondary specialty-link' href='${escapeHtml(item.href)}'>${escapeHtml(item.linkText || "Learn more")}</a>`
@@ -523,6 +524,7 @@ const renderSpecialties = (data) => {
           </article>`
           )
           .join("")}
+        </div>
       </div>
     </section>
 

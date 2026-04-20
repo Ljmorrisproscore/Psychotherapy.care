@@ -58,19 +58,22 @@ faq:
         We require a 24-hour notice for cancellations. Late cancellations or missed appointments will be charged a late cancellation/no show fee of $100.
     - question: What are your psychotherapy fees?
       answer: |
-        For Private Pay/Out of Network Clients, our standard fees per 50-minute session are:
+        For Private Pay and Out of Network Clients, our standard fees per 50-minute session are:
         Individual Psychotherapy: $165
         Couples Psychotherapy: $180
         110 minute Therapy Intensives: $310
     - question: Do you take insurance?
       answer: |
-        We are currently "in the process" of getting "paneled" on 4 insurance carriers:
+        We are currently "in the process" of getting "paneled" on 6 insurance carriers:
         * Blue Shield
         * Blue Cross
         * Aetna
         * Cigna
+        * Tricare West
+        * Sharp Health Plan
 
-        We are hopeful that this process will be complete by the end of July, 2026.
+        We are hopeful that this process will be completed soon. If you would like us to inform you when your insurance provider is accepted, please fill out the contact us form.
+        
         Additionally, we provide Superbills for clients who wish to use out-of-network insurance benefits.
     - question: What is a Superbill?
       answer: |

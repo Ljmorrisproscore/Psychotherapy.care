@@ -292,6 +292,11 @@ p { margin: 0 0 16px; color: var(--muted); }
 }
 .faq { display: grid; gap: 18px; }
 .faq-item { padding: 24px 26px; }
+.specialties-list { display: grid; gap: 18px; }
+.specialty-item { padding: 24px 26px; }
+.specialty-item h2 { margin-bottom: 10px; }
+.specialty-copy p { margin-bottom: 12px; }
+.specialty-copy p:last-child { margin-bottom: 0; }
 .footer {
   padding: 42px 0 72px;
   border-top: 1px solid var(--line);
