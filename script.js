@@ -461,20 +461,24 @@ const renderServices = (data) => {
     </section>
 
     <section class='section compact'>
-      <div class='container grid-2 services-primary-grid'>
+      <div class='container'>
+        <div class='services-list'>
         ${primary
           .map(
             (item) => `
-          <article class='card'>
+          <article class='card service-item'>
             <h2>${escapeHtml(item.title)}</h2>
-            <p>${escapeHtml(item.description)}</p>
+            <div class='service-copy'>${md(item.description)}</div>
           </article>`
           )
           .join("")}
+        </div>
       </div>
     </section>
 
-    <section class='section compact'>
+    ${
+      optionalCards.length
+        ? `<section class='section compact'>
       <div class='container'>
         <div class='eyebrow'>${escapeHtml(optional.eyebrow)}</div>
         <div class='grid-3'>
@@ -489,7 +493,9 @@ const renderServices = (data) => {
             .join("")}
         </div>
       </div>
-    </section>
+    </section>`
+        : ""
+    }
   `;
 };
 

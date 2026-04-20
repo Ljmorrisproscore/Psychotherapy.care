@@ -263,6 +263,11 @@ p { margin: 0 0 16px; color: var(--muted); }
   min-height: 290px;
   height: 100%;
 }
+.services-list { display: grid; gap: 18px; }
+.service-item { padding: 24px 26px; }
+.service-item h2 { margin-bottom: 10px; }
+.service-copy p { margin-bottom: 12px; }
+.service-copy p:last-child { margin-bottom: 0; }
 .specialty-link {
   margin-top: 10px;
 }
