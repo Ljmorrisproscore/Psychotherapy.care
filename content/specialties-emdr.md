@@ -44,7 +44,7 @@ approach:
 
     ## Take the First Step Toward Healing
 
-    To see if EMDR is a good fit for you, please schedule a 20-minute free consultation.
+    To see if EMDR is a good fit for you, please schedule a 15-minute free consultation.
 cta:
   title: Interested in EMDR?
   body: Connect with us to explore whether EMDR is appropriate for your goals and current needs.
