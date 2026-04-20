@@ -16,6 +16,6 @@ details:
   location: 338 Via Vera Cruz, Suite 260, San Marcos, CA 92078
   email: info@psychotherapy.care
   phone: "(760) 454-7249"
-  hours: Monday through Friday, 9:00 am to 5:00 pm PT
+  hours: M-F, 9:00am to 7:00PM
   consultations: We are happy to offer a complimentary 15 minute consultation.
 ---
