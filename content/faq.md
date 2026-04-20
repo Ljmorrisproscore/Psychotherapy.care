@@ -70,7 +70,7 @@ faq:
         * Aetna
         * Cigna
         * Tricare West
-        * Sharp Health Plan
+        * Sharp Health Plan. 
 
         We are hopeful that this process will be completed soon. If you would like us to inform you when your insurance provider is accepted, please fill out the contact us form.
         
