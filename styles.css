@@ -153,7 +153,6 @@ p { margin: 0 0 16px; color: var(--muted); }
   color: var(--text);
   background: #f1ece3;
 }
-.nav-dropdown:hover .nav-submenu,
 .nav-dropdown.open .nav-submenu {
   opacity: 1;
   visibility: visible;
@@ -428,12 +427,6 @@ textarea { min-height: 140px; resize: vertical; }
     padding: 6px 0 0 12px;
   }
   .nav-dropdown.open .nav-submenu {
-    display: grid;
-  }
-  .nav-dropdown:hover .nav-submenu {
-    display: none;
-  }
-  .nav-dropdown.open:hover .nav-submenu {
     display: grid;
   }
   .nav-submenu a {

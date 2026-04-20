@@ -50,6 +50,8 @@ const initSpecialtiesSubmenu = () => {
 
   const menu = document.createElement("div");
   menu.className = "nav-submenu";
+  menu.id = "specialties-submenu";
+  toggle.setAttribute("aria-controls", menu.id);
 
   specialtyMenuItems.forEach((item) => {
     const link = document.createElement("a");
@@ -62,15 +64,57 @@ const initSpecialtiesSubmenu = () => {
     menu.append(link);
   });
 
+  let closeTimer = null;
+  const supportsHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  const clearCloseTimer = () => {
+    if (closeTimer) {
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+  };
+
   const setOpen = (open) => {
+    clearCloseTimer();
     dropdown.classList.toggle("open", open);
     toggle.setAttribute("aria-expanded", String(open));
+  };
+
+  const scheduleClose = () => {
+    clearCloseTimer();
+    closeTimer = window.setTimeout(() => {
+      if (!dropdown.matches(":focus-within")) {
+        setOpen(false);
+      }
+    }, 180);
   };
 
   toggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
     setOpen(!dropdown.classList.contains("open"));
+  });
+
+  if (supportsHover) {
+    dropdown.addEventListener("mouseenter", () => {
+      setOpen(true);
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      scheduleClose();
+    });
+  }
+
+  dropdown.addEventListener("focusin", () => {
+    setOpen(true);
+  });
+
+  dropdown.addEventListener("focusout", () => {
+    window.requestAnimationFrame(() => {
+      if (!dropdown.contains(document.activeElement)) {
+        scheduleClose();
+      }
+    });
   });
 
   dropdown.addEventListener("keydown", (event) => {
