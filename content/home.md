@@ -48,7 +48,7 @@ howItWorks:
       title: Phase 3
       description: In phase 3, we focus on integration and real-life application. You and your therapist strengthen the tools and insights you have built so far, practice using them in everyday situations, and fine-tune what is working best for your needs. This phase helps you feel steady, confident, and prepared for longer-term progress.
     - step: 
-      title: Maintenance
+      title: Phase 4
       description: In phase 4, we move you into maintenance, where we continue to empower you, keep you accountable, and encourage you to continue down a path of personal development. You will continue in this phase until you are ready to complete your treatment with us.
 services:
   eyebrow: Find support
