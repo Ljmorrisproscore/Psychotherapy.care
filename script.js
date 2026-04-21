@@ -252,7 +252,7 @@ const renderHome = (data) => {
       <div class='container'>
         <div class='eyebrow'>${escapeHtml(howItWorks.eyebrow)}</div>
         <h2>${escapeHtml(howItWorks.title)}</h2>
-        <div class='grid-3'>
+        <div class='grid-4'>
           ${phases
             .map(
               (phase) => `
