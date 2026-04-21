@@ -356,6 +356,9 @@ p { margin: 0 0 16px; color: var(--muted); }
   position: relative;
   background: url('assets/hero4.png') center/cover no-repeat;
 }
+.specialty-detail-page.specialty-couples-hero .page-hero {
+  background: url('assets/couples_hero.png') center/cover no-repeat;
+}
 .specialty-detail-page .page-hero::before {
   content: "";
   position: absolute;
