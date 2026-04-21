@@ -47,6 +47,9 @@ howItWorks:
     - step: Phase 3
       title: Integration & Growth
       description: As healing deepens, therapy shifts toward maintenance, confidence, and helping you embody the changes you have worked hard to create.
+        - step: Phase 4
+      title: Maintenance
+      description: As healing deepens, therapy shifts toward maintenance, confidence, and helping you embody the changes you have worked hard to create.
 services:
   eyebrow: Find support
   title: Therapy services
