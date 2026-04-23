@@ -8,29 +8,29 @@ approach:
   body: |
     ## Understanding Eye Movement Desensitization & Reprocessing
 
-    EMDR (Eye Movement Desensitization and Reprocessing) is a powerful therapeutic approach designed to help the mind heal from trauma, much like how the body heals itself naturally. Developed by Dr. Francine Shapiro in 1987, EMDR leverages the brain’s natural coping mechanisms, particularly during REM (rapid eye movement) sleep, to treat Post-Traumatic Stress Disorder (PTSD). Since its inception, EMDR has proven effective in addressing a wide range of mental health issues, including depression, anxiety, grief, and phobias.
+    EMDR (Eye Movement Desensitization and Reprocessing) is a powerful therapeutic approach that helps the mind heal from trauma, much like the body naturally heals from physical injury. Developed by Dr. Francine Shapiro in 1987, EMDR works with the brain’s natural processing mechanisms, especially those associated with REM (rapid eye movement) sleep, to treat Post-Traumatic Stress Disorder (PTSD). Since its introduction, EMDR has also shown strong effectiveness for concerns such as depression, anxiety, grief, and phobias.
 
     ## How EMDR Reprocesses Traumatic Memories
 
-    Trauma can affect us in ways we might not fully recognize. Trauma encompasses more than just obvious events like abuse; it can also include experiences that may not seem traumatic to others but have a significant impact on an individual. Whether it’s a car accident, childhood neglect, or hurtful words, if an event feels traumatic and is stored as such in the brain, it can influence everything from our mood to our coping mechanisms, including substance use.
+    Trauma can affect people in ways they may not immediately recognize. It includes more than obvious events like abuse; it can also include experiences that may not appear traumatic to others but still have a significant impact. Whether it is a car accident, childhood neglect, or deeply hurtful words, if an event is stored by the brain as traumatic, it can influence mood, relationships, and coping patterns, including substance use.
 
     ## How Trauma Affects the Brain
 
-    Under normal circumstances, our brains and bodies process new information and experiences seamlessly. However, when we encounter overwhelming events or repeated distress, our natural coping mechanisms can become overloaded. This leaves disturbing experiences “unprocessed,” stored in the brain’s limbic system in a raw, emotional form. These unprocessed memories remain isolated and can be triggered by similar events, causing intense feelings like anxiety, panic, anger, or despair.
+    Under normal conditions, the brain and body process new experiences in an integrated way. But when someone goes through overwhelming events or repeated distress, those natural coping systems can become overloaded. Disturbing experiences may remain “unprocessed,” stored in the limbic system in a raw emotional form. These memories can then be triggered by similar situations, leading to intense anxiety, panic, anger, or despair.
 
-    EMDR helps to connect these unprocessed memories to the brain’s cortex, where they can be naturally processed and integrated, reducing emotional distress.
+    EMDR helps connect these unprocessed memories to the cortex, where they can be processed and integrated more adaptively, reducing emotional distress.
 
     ## How EMDR Heals the Nervous System
 
-    Trauma not only affects the brain but also disrupts the body’s nervous system, often leaving individuals stuck in fight, flight, freeze, or fawn responses. EMDR helps regulate the nervous system by targeting dysregulated states and guiding the body back to a more balanced state. The bilateral stimulation used in EMDR activates both hemispheres of the brain, promoting neural integration and calming the overactive survival response.
+    Trauma affects not only the brain, but also the nervous system, often leaving people stuck in fight, flight, freeze, or fawn responses. EMDR supports nervous system regulation by working with these dysregulated states and helping the body return to better balance. The bilateral stimulation used in EMDR engages both hemispheres of the brain, promoting neural integration and calming overactive survival responses.
 
     By resetting the nervous system, EMDR helps you move from a state of hypervigilance or emotional shutdown to one of safety and connection. This process fosters a sense of calm, allowing the body and mind to heal together.
 
     ## What to Expect in an EMDR Session
 
-    EMDR sessions tap into your body’s natural healing abilities. After a thorough assessment, you’ll focus on a specific disturbing memory. Eye movements, similar to those during REM sleep, are recreated by following moving lights, using hand pulsators or headphones. These movements are brief and followed by brief discussions about your experiences.
+    EMDR sessions engage your body and mind’s natural healing capacities. After a thorough assessment, you focus on a specific distressing memory. Eye movements, similar to those that occur during REM sleep, are recreated by following moving lights or using hand pulsators or headphones. These sets are brief and followed by short check-ins about your experience.
 
-    As the sessions progress, the distressing memory loses its painful intensity and becomes a neutral recollection. This process can also heal related memories, leading to significant insights and improvements in various aspects of your life.
+    As sessions progress, the distressing memory often loses painful intensity and becomes a more neutral recollection. This process can also support healing of related memories, leading to meaningful insight and improvement across different areas of life.
 
     ## Is EMDR Right for You?
 

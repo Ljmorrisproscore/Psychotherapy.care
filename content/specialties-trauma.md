@@ -12,15 +12,15 @@ approach:
 
     Do you feel like you’re trapped in the past because early traumatic experiences still affect your life to this day?
 
-    Perhaps you frequently deal with overwhelming, intense emotions that are disproportionate to the situations at hand. These are key signs that you’re experiencing traumatic reenactment. For instance, your significant other or close friends might forget to complete a task or chore and you react with rage, disappointment, and sadness; or you completely shut down. As a result of an unintentional mistake on someone else’s part, you feel alone, unheard, and unseen.
+    You may frequently experience overwhelming emotions that feel disproportionate to the situation at hand. These can be signs of traumatic reenactment. For example, a partner or close friend may forget to complete a task and you react with intense rage, disappointment, or sadness; or you may shut down completely. In response to an unintentional mistake, you may feel alone, unheard, and unseen.
 
     ## Trauma Symptoms Can Come Up Out Of Nowhere
 
-    Maybe these intense feelings and reactions occur often, but for no apparent reason. These reactions, however, are key signs of unprocessed memories. When triggered, they may cause you to overreact in damaging ways towards yourself and those around you.  
+    These intense feelings and reactions may happen often, with no clear explanation in the present moment. In many cases, they are signs of unprocessed memories. When triggered, they can lead to reactions that feel damaging to you and to people around you.  
 
-    You are likely a very competent person in your day-to-day life, yet you’re simply unable to wrap your head around why certain behaviors keep reoccurring. But you are not the problem. Your brain has encoded your past trauma, or traumas, in a disorganized way, making it practically impossible to put the puzzle together without professional help.
+    You may be highly capable in your day-to-day life, yet still feel confused about why certain patterns keep recurring. You are not the problem. Your brain has encoded past trauma in a disorganized way, making it very difficult to put the full picture together without support.
 
-    Luckily, treatment for trauma has come a long way. Today, the right therapist can provide a streamlined and compassionate approach to identifying and addressing painful traumatic memories. 
+    The good news is that trauma treatment has come a long way. Today, the right therapist can offer a focused and compassionate path for identifying and addressing painful traumatic memories. 
 
     ## You’re Not Alone In Your Traumatic Experiences
 
@@ -36,7 +36,7 @@ approach:
 
     ## Trauma Therapy Can Help You Move Forward
 
-    Since we understand that you may be nervous about sharing the most difficult experiences of your life with a therapist, we will not encourage you to talk about your trauma in your first session. A good trauma counselor knows this can be re-traumatizing.
+    We understand that sharing the most difficult experiences of your life can feel intimidating. For that reason, we do not encourage you to talk through trauma details in your first session. A skilled trauma therapist knows this can be re-traumatizing.
 
     Our therapists are familiar with the science and research of traumatic memory and the impact of trauma on mind and body. They will explain possible treatment avenues for addressing your trauma and the science behind these methods in an easily digestible way. With a deeper understanding of the physical and psychological impacts of trauma, you’ll gradually be able to let go of self-blame.
 
@@ -48,9 +48,9 @@ approach:
 
     ## How Does EMDR Support Healing From Trauma?
 
-    Eye Movement Desensitization and Reprocessing is a streamlined approach to trauma counseling. EMDR can help you cultivate a sense of safety and emotional stability by addressing debilitating symptoms such as suicidality and substance abuse. This safety also entails strengthening internal resources through positive visual imagery, mindfulness, deep breathing, and grounding through our five senses.
+    Eye Movement Desensitization and Reprocessing is a streamlined, evidence-based approach to trauma counseling. EMDR can help you build a greater sense of safety and emotional stability by addressing debilitating symptoms, including suicidality and substance use. This also includes strengthening internal resources through positive imagery, mindfulness, deep breathing, and grounding through the five senses.
 
-    Another important element of EMDR is helping you to achieve dual awareness while talking about your trauma. This simply means that you’ll become comfortable with objectively talking about your traumatic memories without being re-traumatized by them in the present. Restructuring unhelpful beliefs into adaptive thought patterns and reframing the past is also an important element of EMDR. In sessions, you will be given the tools to master these important skills.
+    Another important element of EMDR is helping you develop dual awareness while talking about trauma. In practical terms, this means becoming more able to discuss traumatic memories without being re-traumatized in the present. EMDR also supports shifting unhelpful beliefs into more adaptive patterns and reframing the past. In sessions, you are given tools to build these skills over time.
 
     ## But You May Still Have Some Questions About Trauma Therapy…
 
