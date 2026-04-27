@@ -1,6 +1,25 @@
 import { load as parseYaml } from "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/+esm";
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js";
 
+const GA_MEASUREMENT_ID = "G-69Q6FVVCTX";
+
+const initGoogleAnalytics = () => {
+  const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  if (!document.querySelector(`script[src="${gaSrc}"]`)) {
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = gaSrc;
+    document.head.appendChild(gaScript);
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID);
+};
+
+initGoogleAnalytics();
+
 const specialtyMenuItems = [
   { label: "Trauma", href: "/specialties-trauma" },
   { label: "EMDR", href: "/specialties-emdr" },
