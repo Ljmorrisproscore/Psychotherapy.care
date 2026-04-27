@@ -64,17 +64,16 @@ faq:
         110 minute Therapy Intensives: $310
     - question: Do you take insurance?
       answer: |
-        We are currently "in the process" of getting "paneled" on 6 insurance carriers:
-        * Blue Shield
-        * Blue Cross
-        * Aetna
-        * Cigna
-        * Tricare West
-        * Sharp Health Plan. 
+        We are a private-pay practice and do not bill insurance directly.
 
-        We are hopeful that this process will be completed soon. If you would like us to inform you when your insurance provider is accepted, please fill out the contact us form.
-        
-        Additionally, we provide Superbills for clients who wish to use out-of-network insurance benefits.
+        We do provide Superbills for clients who want to use out-of-network benefits through eligible PPO plans.
+    - question: What is the benefit of a private-pay provider?
+      answer: |
+        Being private pay allows us to build treatment around what is best for you, not around insurance restrictions.
+
+        This means we can personalize your care, choose the approaches that fit your goals, and focus on the pace and depth that support meaningful progress. It also gives us more flexibility in session planning, protects your privacy by limiting what is shared with third-party payers, and helps us stay centered on clinical quality rather than billing requirements.
+
+        Our goal is to provide thoughtful, individualized care that truly serves your needs.
     - question: What is a Superbill?
       answer: |
         A superbill is a detailed invoice used in healthcare settings that includes information about the services provided to a patient. Typically, it contains codes for diagnoses and procedures (CPT and ICD codes). A superbill serves as a record for insurance claims and reimbursement and is often used by healthcare providers to streamline billing processes.
