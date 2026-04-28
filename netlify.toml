@@ -204,6 +204,12 @@
   force = true
 
 [[redirects]]
+  from = "/teen-therapy-san-marcos.html"
+  to = "/teen-therapy-san-marcos"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/anxiety-therapy-san-marcos"
   to = "/anxiety-therapy-san-marcos.html"
   status = 200
@@ -231,4 +237,9 @@
 [[redirects]]
   from = "/online-therapy-california"
   to = "/online-therapy-california.html"
+  status = 200
+
+[[redirects]]
+  from = "/teen-therapy-san-marcos"
+  to = "/teen-therapy-san-marcos.html"
   status = 200

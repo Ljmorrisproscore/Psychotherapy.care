@@ -1036,6 +1036,7 @@ const renderers = {
   "family-therapy-san-marcos": renderLocalLanding,
   "holistic-therapy-san-marcos": renderLocalLanding,
   "online-therapy-california": renderLocalLanding,
+  "teen-therapy-san-marcos": renderLocalLanding,
   about: renderAbout,
   contact: renderContact,
 };
