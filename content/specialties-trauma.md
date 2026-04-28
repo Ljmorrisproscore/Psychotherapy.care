@@ -78,6 +78,10 @@ approach:
     ## You Can Reclaim Your Life Through Trauma Therapy
 
     If you would like to schedule an appointment or discuss any questions you may have about trauma therapy or EMDR, please contact us.
+
+    ## Located in North San Diego County
+
+    Holistic Healing Psychotherapy is located in San Marcos, CA, with telehealth available across California. Learn more about our [trauma therapy in San Marcos](/trauma-therapy-san-marcos) program or [online therapy across California](/online-therapy-california).
 cta:
   title: Ready to begin your healing work?
   body: Reach out to schedule a consultation and discuss whether trauma-focused therapy is the right fit for you.

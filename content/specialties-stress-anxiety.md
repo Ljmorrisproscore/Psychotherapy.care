@@ -33,6 +33,10 @@ approach:
     Therapy focuses on building awareness of these patterns, understanding how the nervous system operates, and developing the capacity to feel more grounded, regulated, and in control. Rather than trying to eliminate these responses, the goal is to change the relationship to them so they no longer dictate daily life.
 
     Relief does not come from fighting these reactions. It comes from understanding them and building new pathways toward safety and balance.
+
+    ## Located in North San Diego County
+
+    Holistic Healing Psychotherapy is located in San Marcos, CA, with telehealth available across California. Learn more about our [anxiety therapy in San Marcos](/anxiety-therapy-san-marcos) program or [online therapy across California](/online-therapy-california).
 cta:
   title: Looking for relief from anxiety?
   body: We can help you create a personalized treatment plan for stress and anxiety support.

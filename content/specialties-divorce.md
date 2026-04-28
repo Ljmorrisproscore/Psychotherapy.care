@@ -27,6 +27,10 @@ approach:
     Rather than focusing only on "moving on," this approach emphasizes understanding and working through the full experience of divorce. Healing happens by addressing both the emotional impact and the patterns that may carry forward into future relationships.
 
     Over time, this work helps create a greater sense of clarity, resilience, and direction. What begins as a period of disruption can become an opportunity to rebuild with more awareness, stability, and confidence.
+
+    ## Located in North San Diego County
+
+    Holistic Healing Psychotherapy is located in San Marcos, CA, with telehealth available across California. Learn more about our [family therapy in San Marcos](/family-therapy-san-marcos) program or [couples therapy in San Marcos](/couples-therapy-san-marcos).
 cta:
   title: Moving through a divorce?
   body: We are here to support you with practical and compassionate care.

@@ -29,6 +29,10 @@ approach:
     Rather than trying to eliminate conflict, this approach focuses on changing how couples navigate it. Disagreements are a natural part of any relationship, but how they are handled determines whether the relationship grows stronger or more strained.
 
     Couples therapy offers a structured, research-based way to better understand each other, reduce recurring conflict, and create a more stable and connected partnership. Over time, this work helps shift the relationship from cycles of stress and disconnection toward greater clarity, safety, and emotional closeness.
+
+    ## Located in North San Diego County
+
+    Holistic Healing Psychotherapy is located in San Marcos, CA, with telehealth available across California. Learn more about our [couples therapy in San Marcos](/couples-therapy-san-marcos) program or [family therapy in San Marcos](/family-therapy-san-marcos).
 cta:
   title: Ready to strengthen your relationship?
   body: Reach out and we can discuss whether couples therapy is the next right step.

@@ -18,4 +18,5 @@ details:
   phone: "(760) 454-7249"
   hours: M-F, 9:00am to 7:00PM
   consultations: We are happy to offer a complimentary 15 minute consultation.
+  license: "LMFT #161549 - Darlene Morris, Licensed Marriage and Family Therapist"
 ---

@@ -3,17 +3,17 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Contact | Holistic Healing Psychotherapy</title>
-  <meta name='description' content='Contact Holistic Healing Psychotherapy to schedule therapy in San Marcos, CA or through secure telehealth sessions.'>
+  <title>Contact Holistic Healing Psychotherapy | San Marcos, CA</title>
+  <meta name='description' content='Contact Holistic Healing Psychotherapy in San Marcos, CA. Schedule a consultation in-person or via secure telehealth across California.'>
   <link rel='canonical' href='https://psychotherapy.care/contact'>
   <meta property='og:type' content='website'>
-  <meta property='og:title' content='Contact | Holistic Healing Psychotherapy'>
-  <meta property='og:description' content='Contact Holistic Healing Psychotherapy to schedule therapy in San Marcos, CA or through secure telehealth sessions.'>
+  <meta property='og:title' content='Contact Holistic Healing Psychotherapy | San Marcos, CA'>
+  <meta property='og:description' content='Contact Holistic Healing Psychotherapy in San Marcos, CA. Schedule a consultation in-person or via secure telehealth across California.'>
   <meta property='og:url' content='https://psychotherapy.care/contact'>
   <meta property='og:image' content='https://psychotherapy.care/assets/Hero.svg'>
   <meta name='twitter:card' content='summary_large_image'>
-  <meta name='twitter:title' content='Contact | Holistic Healing Psychotherapy'>
-  <meta name='twitter:description' content='Contact Holistic Healing Psychotherapy to schedule therapy in San Marcos, CA or through secure telehealth sessions.'>
+  <meta name='twitter:title' content='Contact Holistic Healing Psychotherapy | San Marcos, CA'>
+  <meta name='twitter:description' content='Contact Holistic Healing Psychotherapy in San Marcos, CA. Schedule a consultation in-person or via secure telehealth across California.'>
   <meta name='twitter:image' content='https://psychotherapy.care/assets/Hero.svg'>
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
@@ -26,9 +26,29 @@
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      "name": "Contact | Holistic Healing Psychotherapy",
+      "name": "Contact Holistic Healing Psychotherapy | San Marcos, CA",
       "url": "https://psychotherapy.care/contact",
-      "description": "Contact Holistic Healing Psychotherapy to schedule therapy in San Marcos, CA or through secure telehealth sessions."
+      "description": "Contact Holistic Healing Psychotherapy in San Marcos, CA. Schedule a consultation in-person or via secure telehealth across California.",
+      "mainEntity": {
+        "@type": "MedicalBusiness",
+        "name": "Holistic Healing Psychotherapy",
+        "telephone": "+1-760-454-7249",
+        "email": "info@psychotherapy.care",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "338 Via Vera Cruz, Suite 260",
+          "addressLocality": "San Marcos",
+          "addressRegion": "CA",
+          "postalCode": "92078",
+          "addressCountry": "US"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      }
     }
   </script>
 </head>
@@ -52,11 +72,44 @@
     </div>
   </header>
   <main id='main-content' data-page='contact'>
-    <section class='section compact'>
+    <!--prerender:begin-->
+    <section class='page-hero'>
       <div class='container'>
-        <div class='card'>Loading content...</div>
+        <div class='eyebrow'>Contact</div>
+        <h1>Start your therapy journey.</h1>
+        <p>We look forward to hearing from you.</p>
       </div>
     </section>
+
+    <section class='section compact'>
+      <div class='container grid-2'>
+        <div class='card'>
+          <h2>Reach out</h2>
+          <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
+            <input type='hidden' name='form-name' value='contact'>
+            <p style='display:none;'>
+              <label>Do not fill this out: <input name='bot-field'></label>
+            </p>
+            <input class='input' type='text' name='name' placeholder='Name' required>
+            <input class='input' type='email' name='email' placeholder='Email' required>
+            <input class='input' type='text' name='phone' placeholder='Phone'>
+            <textarea name='message' placeholder='How can we help you?' required></textarea>
+            <button class='btn' type='submit'>Send Inquiry</button>
+          </form>
+          <p class='small' style='margin-top:12px;'>.</p>
+        </div>
+        <div class='card'>
+          <h2>Holistic Healing Psychotherapy</h2>
+          <p><strong>Location:</strong> 338 Via Vera Cruz, Suite 260, San Marcos, CA 92078</p>
+          <p><strong>Email:</strong> info@psychotherapy.care</p>
+          <p><strong>Phone:</strong> (760) 454-7249</p>
+          <p><strong>Hours:</strong> M-F, 9:00am to 7:00PM</p>
+          <p><strong>Consultations:</strong> We are happy to offer a complimentary 15 minute consultation.</p>
+          <p><strong>License:</strong> LMFT #161549 - Darlene Morris, Licensed Marriage and Family Therapist</p>
+        </div>
+      </div>
+    </section>
+  <!--prerender:end-->
   </main>
   <form name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' hidden>
     <input type='hidden' name='form-name' value='contact'>
@@ -69,7 +122,8 @@
     <div class='container footer-grid'>
       <div><div class='brand'>Holistic Healing<small>Psychotherapy</small></div></div>
       <div><h3>Pages</h3><ul class='list-clean'><li><a href='/approach'>Approach</a></li><li><a href='/services'>Services</a></li></ul></div>
-      <div><h3>Contact</h3><ul class='list-clean'><li>info@psychotherapy.care</li><li>(760) 454-7249</li><li>338 Via Vera Cruz, Suite 260, San Marcos, CA 92078</li></ul></div>
+      <div><h3>Contact</h3><ul class='list-clean'><li>info@psychotherapy.care</li><li>(760) 454-7249</li>
+          <li>License #161549</li><li>338 Via Vera Cruz, Suite 260, San Marcos, CA 92078</li></ul></div>
     </div>
   </footer>
   <script type='module' src='script.js'></script>

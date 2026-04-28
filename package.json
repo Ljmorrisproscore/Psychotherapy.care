@@ -1,0 +1,14 @@
+{
+  "name": "holistic-healing-psychotherapy-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prerender": "node prerender.mjs",
+    "build": "node prerender.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "marked": "^12.0.2"
+  }
+}

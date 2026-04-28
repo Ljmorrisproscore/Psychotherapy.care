@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  command = "npm install && npm run prerender"
 
 [[redirects]]
   from = "/admin"
@@ -164,4 +165,70 @@
 [[redirects]]
   from = "/lp-divorce"
   to = "/lp-divorce.html"
+  status = 200
+
+[[redirects]]
+  from = "/anxiety-therapy-san-marcos.html"
+  to = "/anxiety-therapy-san-marcos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/trauma-therapy-san-marcos.html"
+  to = "/trauma-therapy-san-marcos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/couples-therapy-san-marcos.html"
+  to = "/couples-therapy-san-marcos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/family-therapy-san-marcos.html"
+  to = "/family-therapy-san-marcos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/holistic-therapy-san-marcos.html"
+  to = "/holistic-therapy-san-marcos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/online-therapy-california.html"
+  to = "/online-therapy-california"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/anxiety-therapy-san-marcos"
+  to = "/anxiety-therapy-san-marcos.html"
+  status = 200
+
+[[redirects]]
+  from = "/trauma-therapy-san-marcos"
+  to = "/trauma-therapy-san-marcos.html"
+  status = 200
+
+[[redirects]]
+  from = "/couples-therapy-san-marcos"
+  to = "/couples-therapy-san-marcos.html"
+  status = 200
+
+[[redirects]]
+  from = "/family-therapy-san-marcos"
+  to = "/family-therapy-san-marcos.html"
+  status = 200
+
+[[redirects]]
+  from = "/holistic-therapy-san-marcos"
+  to = "/holistic-therapy-san-marcos.html"
+  status = 200
+
+[[redirects]]
+  from = "/online-therapy-california"
+  to = "/online-therapy-california.html"
   status = 200

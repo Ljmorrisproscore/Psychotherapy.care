@@ -27,6 +27,10 @@ approach:
     Over time, this work helps restore a sense of connection to the body, making it easier to feel calm, present, and in control. The goal is not to eliminate stress entirely, but to develop a system that can respond flexibly, recover more quickly, and no longer stay stuck in cycles of anxiety.
 
     When the body learns that it is safe again, everything begins to shift.
+
+    ## Located in North San Diego County
+
+    Holistic Healing Psychotherapy is located in San Marcos, CA, with telehealth available across California. Learn more about our [holistic therapy in San Marcos](/holistic-therapy-san-marcos) program or [anxiety therapy in San Marcos](/anxiety-therapy-san-marcos).
 cta:
   title: Curious about somatic therapy?
   body: Contact us to explore whether a body-centered approach fits your treatment goals.

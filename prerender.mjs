@@ -1,221 +1,12 @@
-import { load as parseYaml } from "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/+esm";
-import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js";
+import { promises as fs } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { load as parseYaml } from "js-yaml";
+import { marked } from "marked";
 
-const GA_MEASUREMENT_ID = "G-69Q6FVVCTX";
-
-const initGoogleAnalytics = () => {
-  const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  if (!document.querySelector(`script[src="${gaSrc}"]`)) {
-    const gaScript = document.createElement("script");
-    gaScript.async = true;
-    gaScript.src = gaSrc;
-    document.head.appendChild(gaScript);
-  }
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
-  window.gtag("js", new Date());
-  window.gtag("config", GA_MEASUREMENT_ID);
-};
-
-initGoogleAnalytics();
-
-const trackGaEvent = (eventName, params = {}) => {
-  if (typeof window.gtag !== "function") {
-    return;
-  }
-  window.gtag("event", eventName, params);
-};
-
-const initConversionTracking = () => {
-  document.addEventListener("click", (event) => {
-    const trackedElement = event.target.closest("[data-track]");
-    if (!trackedElement) {
-      return;
-    }
-
-    trackGaEvent("cta_click", {
-      event_category: "engagement",
-      event_label: trackedElement.dataset.track,
-      page_path: window.location.pathname,
-    });
-  });
-
-  document.addEventListener("submit", (event) => {
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      return;
-    }
-    if (form.name === "contact" || form.classList.contains("contact-form")) {
-      trackGaEvent("form_submit", {
-        event_category: "conversion",
-        event_label: "contact_form",
-        page_path: window.location.pathname,
-      });
-    }
-  });
-
-  const path = window.location.pathname;
-  if (path === "/thank-you" || path === "/thank-you.html") {
-    trackGaEvent("generate_lead", {
-      event_category: "conversion",
-      event_label: "thank_you_page",
-      page_path: path,
-    });
-  }
-};
-
-initConversionTracking();
-
-const specialtyMenuItems = [
-  { label: "Trauma", href: "/specialties-trauma" },
-  { label: "EMDR", href: "/specialties-emdr" },
-  { label: "Stress & Anxiety", href: "/specialties-stress-anxiety" },
-  { label: "Depression", href: "/specialties-depression" },
-  { label: "Grief & Loss", href: "/specialties-grief-loss" },
-  { label: "Couples", href: "/specialties-couples" },
-  { label: "Somatic Therapy", href: "/specialties-somatic-therapy" },
-  { label: "Divorce", href: "/specialties-divorce" },
-];
-
-const normalizePath = (path) => {
-  const sanitized = String(path ?? "").replace(/\/+$/, "");
-  if (!sanitized || sanitized === "/index" || sanitized === "/index.html") {
-    return "/";
-  }
-  return sanitized.replace(/\.html$/, "");
-};
-
-const initSpecialtiesSubmenu = () => {
-  const navLinks = document.querySelector(".nav-links");
-  if (!navLinks) {
-    return;
-  }
-
-  const specialtiesLink = navLinks.querySelector("a[href='/specialties'], a[href='/specialties/']");
-  if (!specialtiesLink) {
-    return;
-  }
-
-  const currentPath = normalizePath(window.location.pathname);
-  const isSpecialtyPage = specialtyMenuItems.some((item) => normalizePath(item.href) === currentPath);
-  const isSpecialtiesOverview = currentPath === "/specialties";
-
-  const dropdown = document.createElement("div");
-  dropdown.className = "nav-dropdown";
-  if (specialtiesLink.classList.contains("active") || isSpecialtyPage || isSpecialtiesOverview) {
-    dropdown.classList.add("is-active");
-  }
-
-  const toggle = document.createElement("button");
-  toggle.type = "button";
-  toggle.className = "nav-dropdown-toggle";
-  toggle.textContent = "Specialties";
-  toggle.setAttribute("aria-expanded", "false");
-  toggle.setAttribute("aria-label", "Toggle specialties menu");
-
-  const menu = document.createElement("div");
-  menu.className = "nav-submenu";
-  menu.id = "specialties-submenu";
-  toggle.setAttribute("aria-controls", menu.id);
-
-  specialtyMenuItems.forEach((item) => {
-    const link = document.createElement("a");
-    link.href = item.href;
-    link.textContent = item.label;
-    if (normalizePath(item.href) === currentPath) {
-      link.classList.add("active");
-      toggle.setAttribute("aria-current", "page");
-    }
-    menu.append(link);
-  });
-
-  let closeTimer = null;
-  const supportsHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-
-  const clearCloseTimer = () => {
-    if (closeTimer) {
-      window.clearTimeout(closeTimer);
-      closeTimer = null;
-    }
-  };
-
-  const setOpen = (open) => {
-    clearCloseTimer();
-    dropdown.classList.toggle("open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-  };
-
-  const scheduleClose = () => {
-    clearCloseTimer();
-    closeTimer = window.setTimeout(() => {
-      if (!dropdown.matches(":focus-within")) {
-        setOpen(false);
-      }
-    }, 180);
-  };
-
-  toggle.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setOpen(!dropdown.classList.contains("open"));
-  });
-
-  if (supportsHover) {
-    dropdown.addEventListener("mouseenter", () => {
-      setOpen(true);
-    });
-
-    dropdown.addEventListener("mouseleave", () => {
-      scheduleClose();
-    });
-  }
-
-  dropdown.addEventListener("focusin", () => {
-    setOpen(true);
-  });
-
-  dropdown.addEventListener("focusout", () => {
-    window.requestAnimationFrame(() => {
-      if (!dropdown.contains(document.activeElement)) {
-        scheduleClose();
-      }
-    });
-  });
-
-  dropdown.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      setOpen(false);
-      toggle.focus();
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  menu.addEventListener("click", (event) => {
-    if (event.target.closest("a")) {
-      setOpen(false);
-    }
-  });
-
-  dropdown.append(toggle, menu);
-  specialtiesLink.replaceWith(dropdown);
-};
-
-const initMainMenu = () => {
-  const toggle = document.querySelector(".menu-toggle");
-  const links = document.querySelector(".nav-links");
-  if (toggle && links) {
-    toggle.addEventListener("click", () => links.classList.toggle("show"));
-  }
-};
-
-initSpecialtiesSubmenu();
-initMainMenu();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = __dirname;
+const CONTENT_DIR = path.join(ROOT, "content");
 
 marked.setOptions({ breaks: true });
 
@@ -402,7 +193,7 @@ const renderFaq = (data) => {
               (item) => `
             <article class='card faq-item'>
               <h3>${escapeHtml(item.question)}</h3>
-              <p>${escapeHtml(item.answer)}</p>
+              <div>${md(item.answer)}</div>
             </article>`
             )
             .join("")}
@@ -657,6 +448,190 @@ const renderSpecialtyPage = (data) => {
   `;
 };
 
+const renderAdLandingPage = (data) => {
+  const hero = data.hero ?? {};
+  const sections = data.sections ?? {};
+  const highlights = Array.isArray(data.highlights) ? data.highlights : [];
+  const steps = Array.isArray(data.steps) ? data.steps : [];
+  const cta = data.cta ?? {};
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        ${hero.intro ? md(hero.intro) : ""}
+        <div class='hero-actions'>
+          <a class='btn' data-track='lp-primary-cta' href='${escapeHtml(hero.primaryCtaHref || "/contact")}'>${escapeHtml(hero.primaryCtaText || "Start your journey now")}</a>
+          <a class='btn secondary' href='tel:+17604547249'>Call (760) 454-7249</a>
+        </div>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container grid-2'>
+        <article class='card'>
+          <h2>${escapeHtml(sections.problemTitle)}</h2>
+          ${sections.problemBody ? md(sections.problemBody) : ""}
+        </article>
+        <article class='card'>
+          <h2>${escapeHtml(sections.approachTitle)}</h2>
+          ${sections.approachBody ? md(sections.approachBody) : ""}
+        </article>
+      </div>
+    </section>
+
+    ${
+      highlights.length
+        ? `<section class='section compact'>
+      <div class='container'>
+        <h2>${escapeHtml(sections.highlightsTitle || "How we support your healing")}</h2>
+        <div class='grid-3'>
+          ${highlights
+            .map(
+              (item) => `
+            <article class='card'>
+              <h3>${escapeHtml(item.title)}</h3>
+              <p>${escapeHtml(item.description)}</p>
+            </article>`
+            )
+            .join("")}
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
+
+    ${
+      steps.length
+        ? `<section class='section compact'>
+      <div class='container'>
+        <h2>${escapeHtml(sections.processTitle || "What to expect")}</h2>
+        <div class='approach-steps'>
+          ${steps
+            .map(
+              (step) => `
+            <article class='card phase' data-step='${escapeHtml(step.step)}'>
+              <h3>${escapeHtml(step.title)}</h3>
+              <p>${escapeHtml(step.description)}</p>
+            </article>`
+            )
+            .join("")}
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
+
+    <section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <div class='eyebrow'>${escapeHtml(cta.eyebrow)}</div>
+          <h2>${escapeHtml(cta.title)}</h2>
+          ${cta.body ? `<p>${escapeHtml(cta.body)}</p>` : ""}
+          <div class='hero-actions'>
+            <a class='btn' data-track='lp-final-cta' href='${escapeHtml(cta.primaryCtaHref || "/contact")}'>${escapeHtml(cta.primaryCtaText || "Start your journey now")}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+};
+
+const renderAbout = (data) => {
+  const hero = data.hero ?? {};
+  const bio = data.bio ?? {};
+  const bullets = Array.isArray(bio.bullets) ? bio.bullets : [];
+  const values = Array.isArray(data.values) ? data.values : [];
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container grid-2'>
+        <div class='image-card about-portrait'><img src='${escapeHtml(bio.imageSrc)}' alt='${escapeHtml(bio.imageAlt)}'></div>
+        <div>
+          <h2>${escapeHtml(bio.title)}</h2>
+          ${md(bio.body)}
+          ${
+            bullets.length
+              ? `<ul class='list-clean'>${bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
+              : ""
+          }
+        </div>
+      </div>
+    </section>
+
+    ${
+      values.length
+        ? `<section class='section compact'>
+      <div class='container grid-3'>
+        ${values
+          .map(
+            (item) => `
+          <article class='card'>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.description)}</p>
+          </article>`
+          )
+          .join("")}
+      </div>
+    </section>`
+        : ""
+    }
+  `;
+};
+
+const renderContact = (data) => {
+  const hero = data.hero ?? {};
+  const form = data.form ?? {};
+  const details = data.details ?? {};
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        <p>${escapeHtml(hero.intro)}</p>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container grid-2'>
+        <div class='card'>
+          <h2>${escapeHtml(form.title)}</h2>
+          <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
+            <input type='hidden' name='form-name' value='contact'>
+            <p style='display:none;'>
+              <label>Do not fill this out: <input name='bot-field'></label>
+            </p>
+            <input class='input' type='text' name='name' placeholder='${escapeHtml(form.namePlaceholder)}' required>
+            <input class='input' type='email' name='email' placeholder='${escapeHtml(form.emailPlaceholder)}' required>
+            <input class='input' type='text' name='phone' placeholder='${escapeHtml(form.phonePlaceholder)}'>
+            <textarea name='message' placeholder='${escapeHtml(form.messagePlaceholder)}' required></textarea>
+            <button class='btn' type='submit'>${escapeHtml(form.buttonText)}</button>
+          </form>
+          <p class='small' style='margin-top:12px;'>${escapeHtml(form.note)}</p>
+        </div>
+        <div class='card'>
+          <h2>${escapeHtml(details.title)}</h2>
+          <p><strong>Location:</strong> ${escapeHtml(details.location)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(details.email)}</p>
+          <p><strong>Phone:</strong> ${escapeHtml(details.phone)}</p>
+          <p><strong>Hours:</strong> ${escapeHtml(details.hours)}</p>
+          <p><strong>Consultations:</strong> ${escapeHtml(details.consultations)}</p>
+          ${details.license ? `<p><strong>License:</strong> ${escapeHtml(details.license)}</p>` : ""}
+        </div>
+      </div>
+    </section>
+  `;
+};
+
 const renderLocalLanding = (data) => {
   const hero = data.hero ?? {};
   const sections = data.sections ?? {};
@@ -830,184 +805,6 @@ const renderLocalLanding = (data) => {
   `;
 };
 
-const renderAdLandingPage = (data) => {
-  const hero = data.hero ?? {};
-  const sections = data.sections ?? {};
-  const highlights = Array.isArray(data.highlights) ? data.highlights : [];
-  const steps = Array.isArray(data.steps) ? data.steps : [];
-  const cta = data.cta ?? {};
-
-  return `
-    <section class='page-hero'>
-      <div class='container'>
-        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
-        <h1>${escapeHtml(hero.title)}</h1>
-        ${hero.intro ? md(hero.intro) : ""}
-        <div class='hero-actions'>
-          <a class='btn' data-track='lp-primary-cta' href='${escapeHtml(hero.primaryCtaHref || "/contact")}'>${escapeHtml(hero.primaryCtaText || "Start your journey now")}</a>
-          <a class='btn secondary' href='tel:+17604547249'>Call (760) 454-7249</a>
-        </div>
-      </div>
-    </section>
-
-    <section class='section compact'>
-      <div class='container grid-2'>
-        <article class='card'>
-          <h2>${escapeHtml(sections.problemTitle)}</h2>
-          ${sections.problemBody ? md(sections.problemBody) : ""}
-        </article>
-        <article class='card'>
-          <h2>${escapeHtml(sections.approachTitle)}</h2>
-          ${sections.approachBody ? md(sections.approachBody) : ""}
-        </article>
-      </div>
-    </section>
-
-    ${
-      highlights.length
-        ? `<section class='section compact'>
-      <div class='container'>
-        <h2>${escapeHtml(sections.highlightsTitle || "How we support your healing")}</h2>
-        <div class='grid-3'>
-          ${highlights
-            .map(
-              (item) => `
-            <article class='card'>
-              <h3>${escapeHtml(item.title)}</h3>
-              <p>${escapeHtml(item.description)}</p>
-            </article>`
-            )
-            .join("")}
-        </div>
-      </div>
-    </section>`
-        : ""
-    }
-
-    ${
-      steps.length
-        ? `<section class='section compact'>
-      <div class='container'>
-        <h2>${escapeHtml(sections.processTitle || "What to expect")}</h2>
-        <div class='approach-steps'>
-          ${steps
-            .map(
-              (step) => `
-            <article class='card phase' data-step='${escapeHtml(step.step)}'>
-              <h3>${escapeHtml(step.title)}</h3>
-              <p>${escapeHtml(step.description)}</p>
-            </article>`
-            )
-            .join("")}
-        </div>
-      </div>
-    </section>`
-        : ""
-    }
-
-    <section class='section'>
-      <div class='container'>
-        <div class='cta'>
-          <div class='eyebrow'>${escapeHtml(cta.eyebrow)}</div>
-          <h2>${escapeHtml(cta.title)}</h2>
-          ${cta.body ? `<p>${escapeHtml(cta.body)}</p>` : ""}
-          <div class='hero-actions'>
-            <a class='btn' data-track='lp-final-cta' href='${escapeHtml(cta.primaryCtaHref || "/contact")}'>${escapeHtml(cta.primaryCtaText || "Start your journey now")}</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  `;
-};
-
-const renderAbout = (data) => {
-  const hero = data.hero ?? {};
-  const bio = data.bio ?? {};
-  const bullets = Array.isArray(bio.bullets) ? bio.bullets : [];
-  const values = Array.isArray(data.values) ? data.values : [];
-
-  return `
-    <section class='page-hero'>
-      <div class='container'>
-        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
-        <h1>${escapeHtml(hero.title)}</h1>
-      </div>
-    </section>
-
-    <section class='section compact'>
-      <div class='container grid-2'>
-        <div class='image-card about-portrait'><img src='${escapeHtml(bio.imageSrc)}' alt='${escapeHtml(bio.imageAlt)}'></div>
-        <div>
-          <h2>${escapeHtml(bio.title)}</h2>
-          ${md(bio.body)}
-          <p>Suggested structure:</p>
-          <ul class='list-clean'>
-            ${bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class='section compact'>
-      <div class='container grid-3'>
-        ${values
-          .map(
-            (item) => `
-          <article class='card'>
-            <h3>${escapeHtml(item.title)}</h3>
-            <p>${escapeHtml(item.description)}</p>
-          </article>`
-          )
-          .join("")}
-      </div>
-    </section>
-  `;
-};
-
-const renderContact = (data) => {
-  const hero = data.hero ?? {};
-  const form = data.form ?? {};
-  const details = data.details ?? {};
-
-  return `
-    <section class='page-hero'>
-      <div class='container'>
-        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
-        <h1>${escapeHtml(hero.title)}</h1>
-        <p>${escapeHtml(hero.intro)}</p>
-      </div>
-    </section>
-
-    <section class='section compact'>
-      <div class='container grid-2'>
-        <div class='card'>
-          <h2>${escapeHtml(form.title)}</h2>
-          <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
-            <input type='hidden' name='form-name' value='contact'>
-            <p style='display:none;'>
-              <label>Do not fill this out: <input name='bot-field'></label>
-            </p>
-            <input class='input' type='text' name='name' placeholder='${escapeHtml(form.namePlaceholder)}' required>
-            <input class='input' type='email' name='email' placeholder='${escapeHtml(form.emailPlaceholder)}' required>
-            <input class='input' type='text' name='phone' placeholder='${escapeHtml(form.phonePlaceholder)}'>
-            <textarea name='message' placeholder='${escapeHtml(form.messagePlaceholder)}' required></textarea>
-            <button class='btn' type='submit'>${escapeHtml(form.buttonText)}</button>
-          </form>
-          <p class='small' style='margin-top:12px;'>${escapeHtml(form.note)}</p>
-        </div>
-        <div class='card'>
-          <h2>${escapeHtml(details.title)}</h2>
-          <p><strong>Location:</strong> ${escapeHtml(details.location)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(details.email)}</p>
-          <p><strong>Phone:</strong> ${escapeHtml(details.phone)}</p>
-          <p><strong>Hours:</strong> ${escapeHtml(details.hours)}</p>
-          <p><strong>Consultations:</strong> ${escapeHtml(details.consultations)}</p>
-        </div>
-      </div>
-    </section>
-  `;
-};
-
 const renderers = {
   home: renderHome,
   faq: renderFaq,
@@ -1040,57 +837,86 @@ const renderers = {
   contact: renderContact,
 };
 
-const loadPageContent = async () => {
-  const root = document.querySelector("#main-content");
-  if (!root) {
-    return;
-  }
+const PRERENDER_BEGIN = "<!--prerender:begin-->";
+const PRERENDER_END = "<!--prerender:end-->";
 
-  const page = root.dataset.page;
-  const render = renderers[page];
-  if (!page || !render) {
-    root.innerHTML = "<section class='section'><div class='container'><div class='card'>Page content is not configured.</div></div></section>";
-    return;
+const injectPrerenderedContent = (html, slug, rendered) => {
+  const startMarker = `data-page='${slug}'`;
+  const startIdx = html.indexOf(startMarker);
+  if (startIdx === -1) {
+    return null;
   }
-
-  // If the page was prerendered at build time, skip the runtime fetch.
-  if (root.innerHTML.includes("prerender:begin")) {
-    return;
+  const openTagEnd = html.indexOf(">", startIdx);
+  const mainCloseIdx = html.indexOf("</main>", openTagEnd);
+  if (openTagEnd === -1 || mainCloseIdx === -1) {
+    return null;
   }
+  const before = html.slice(0, openTagEnd + 1);
+  const after = html.slice(mainCloseIdx);
+  return `${before}\n    ${PRERENDER_BEGIN}${rendered}${PRERENDER_END}\n  ${after}`;
+};
 
+const prerenderPage = async (htmlFile) => {
+  const filePath = path.join(ROOT, htmlFile);
+  const html = await fs.readFile(filePath, "utf8");
+  const slugMatch = html.match(/data-page='([^']+)'/);
+  if (!slugMatch) {
+    return { skipped: true, reason: "no data-page" };
+  }
+  const slug = slugMatch[1];
+  const render = renderers[slug];
+  if (!render) {
+    return { skipped: true, reason: `no renderer for ${slug}` };
+  }
+  const mdPath = path.join(CONTENT_DIR, `${slug}.md`);
+  let raw;
   try {
-    const response = await fetch(`content/${page}.md`, { cache: "no-cache" });
-    if (!response.ok) {
-      throw new Error(`Unable to load content/${page}.md`);
+    raw = await fs.readFile(mdPath, "utf8");
+  } catch {
+    return { skipped: true, reason: `missing content: ${slug}.md` };
+  }
+  const data = parseFrontmatter(raw);
+  const rendered = render(data);
+  const updated = injectPrerenderedContent(html, slug, rendered);
+  if (!updated) {
+    return { skipped: true, reason: "could not inject" };
+  }
+  await fs.writeFile(filePath, updated, "utf8");
+  return { skipped: false, slug };
+};
+
+const main = async () => {
+  const entries = await fs.readdir(ROOT);
+  const htmlFiles = entries.filter(
+    (f) => f.endsWith(".html") && !["thank-you.html"].includes(f)
+  );
+
+  const results = [];
+  for (const file of htmlFiles) {
+    try {
+      const result = await prerenderPage(file);
+      results.push({ file, ...result });
+    } catch (error) {
+      results.push({ file, skipped: true, reason: error.message });
     }
-    const raw = await response.text();
-    const data = parseFrontmatter(raw);
-    root.innerHTML = render(data);
-  } catch (error) {
-    console.error(error);
-    root.innerHTML = "<section class='section'><div class='container'><div class='card'>Content failed to load. Check your Markdown files.</div></div></section>";
+  }
+
+  const rendered = results.filter((r) => !r.skipped);
+  const skipped = results.filter((r) => r.skipped);
+
+  console.log(`Prerendered ${rendered.length} pages.`);
+  for (const r of rendered) {
+    console.log(`  - ${r.file} (${r.slug})`);
+  }
+  if (skipped.length) {
+    console.log(`Skipped ${skipped.length} files:`);
+    for (const r of skipped) {
+      console.log(`  - ${r.file}: ${r.reason}`);
+    }
   }
 };
 
-const initHeroVideoPlayback = () => {
-  const video = document.querySelector(".hero-video");
-  if (!video) {
-    return;
-  }
-
-  // Some browsers require an explicit play() call even with autoplay+muted.
-  const tryPlay = () => {
-    const attempt = video.play();
-    if (attempt && typeof attempt.catch === "function") {
-      attempt.catch(() => {
-        // Keep static fallback poster/background if playback is blocked.
-      });
-    }
-  };
-
-  tryPlay();
-  document.addEventListener("click", tryPlay, { once: true });
-  document.addEventListener("touchstart", tryPlay, { once: true });
-};
-
-loadPageContent().then(initHeroVideoPlayback);
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
