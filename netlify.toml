@@ -77,3 +77,91 @@
   from = "/faq"
   to = "/faq.html"
   status = 200
+
+[[redirects]]
+  from = "/lp-trauma.html"
+  to = "/lp-trauma"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-emdr.html"
+  to = "/lp-emdr"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-stress-anxiety.html"
+  to = "/lp-stress-anxiety"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-depression.html"
+  to = "/lp-depression"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-grief-loss.html"
+  to = "/lp-grief-loss"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-couples.html"
+  to = "/lp-couples"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-somatic-therapy.html"
+  to = "/lp-somatic-therapy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-divorce.html"
+  to = "/lp-divorce"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lp-trauma"
+  to = "/lp-trauma.html"
+  status = 200
+
+[[redirects]]
+  from = "/lp-emdr"
+  to = "/lp-emdr.html"
+  status = 200
+
+[[redirects]]
+  from = "/lp-stress-anxiety"
+  to = "/lp-stress-anxiety.html"
+  status = 200
+
+[[redirects]]
+  from = "/lp-depression"
+  to = "/lp-depression.html"
+  status = 200
+
+[[redirects]]
+  from = "/lp-grief-loss"
+  to = "/lp-grief-loss.html"
+  status = 200
+
+[[redirects]]
+  from = "/lp-couples"
+  to = "/lp-couples.html"
+  status = 200
+
+[[redirects]]
+  from = "/lp-somatic-therapy"
+  to = "/lp-somatic-therapy.html"
+  status = 200
+
+[[redirects]]
+  from = "/lp-divorce"
+  to = "/lp-divorce.html"
+  status = 200

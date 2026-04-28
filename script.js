@@ -20,6 +20,53 @@ const initGoogleAnalytics = () => {
 
 initGoogleAnalytics();
 
+const trackGaEvent = (eventName, params = {}) => {
+  if (typeof window.gtag !== "function") {
+    return;
+  }
+  window.gtag("event", eventName, params);
+};
+
+const initConversionTracking = () => {
+  document.addEventListener("click", (event) => {
+    const trackedElement = event.target.closest("[data-track]");
+    if (!trackedElement) {
+      return;
+    }
+
+    trackGaEvent("cta_click", {
+      event_category: "engagement",
+      event_label: trackedElement.dataset.track,
+      page_path: window.location.pathname,
+    });
+  });
+
+  document.addEventListener("submit", (event) => {
+    const form = event.target;
+    if (!(form instanceof HTMLFormElement)) {
+      return;
+    }
+    if (form.name === "contact" || form.classList.contains("contact-form")) {
+      trackGaEvent("form_submit", {
+        event_category: "conversion",
+        event_label: "contact_form",
+        page_path: window.location.pathname,
+      });
+    }
+  });
+
+  const path = window.location.pathname;
+  if (path === "/thank-you" || path === "/thank-you.html") {
+    trackGaEvent("generate_lead", {
+      event_category: "conversion",
+      event_label: "thank_you_page",
+      page_path: path,
+    });
+  }
+};
+
+initConversionTracking();
+
 const specialtyMenuItems = [
   { label: "Trauma", href: "/specialties-trauma" },
   { label: "EMDR", href: "/specialties-emdr" },
@@ -610,6 +657,96 @@ const renderSpecialtyPage = (data) => {
   `;
 };
 
+const renderAdLandingPage = (data) => {
+  const hero = data.hero ?? {};
+  const sections = data.sections ?? {};
+  const highlights = Array.isArray(data.highlights) ? data.highlights : [];
+  const steps = Array.isArray(data.steps) ? data.steps : [];
+  const cta = data.cta ?? {};
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        ${hero.intro ? md(hero.intro) : ""}
+        <div class='hero-actions'>
+          <a class='btn' data-track='lp-primary-cta' href='${escapeHtml(hero.primaryCtaHref || "/contact")}'>${escapeHtml(hero.primaryCtaText || "Start your journey now")}</a>
+          <a class='btn secondary' href='tel:+17604547249'>Call (760) 454-7249</a>
+        </div>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container grid-2'>
+        <article class='card'>
+          <h2>${escapeHtml(sections.problemTitle)}</h2>
+          ${sections.problemBody ? md(sections.problemBody) : ""}
+        </article>
+        <article class='card'>
+          <h2>${escapeHtml(sections.approachTitle)}</h2>
+          ${sections.approachBody ? md(sections.approachBody) : ""}
+        </article>
+      </div>
+    </section>
+
+    ${
+      highlights.length
+        ? `<section class='section compact'>
+      <div class='container'>
+        <h2>${escapeHtml(sections.highlightsTitle || "How we support your healing")}</h2>
+        <div class='grid-3'>
+          ${highlights
+            .map(
+              (item) => `
+            <article class='card'>
+              <h3>${escapeHtml(item.title)}</h3>
+              <p>${escapeHtml(item.description)}</p>
+            </article>`
+            )
+            .join("")}
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
+
+    ${
+      steps.length
+        ? `<section class='section compact'>
+      <div class='container'>
+        <h2>${escapeHtml(sections.processTitle || "What to expect")}</h2>
+        <div class='approach-steps'>
+          ${steps
+            .map(
+              (step) => `
+            <article class='card phase' data-step='${escapeHtml(step.step)}'>
+              <h3>${escapeHtml(step.title)}</h3>
+              <p>${escapeHtml(step.description)}</p>
+            </article>`
+            )
+            .join("")}
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
+
+    <section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <div class='eyebrow'>${escapeHtml(cta.eyebrow)}</div>
+          <h2>${escapeHtml(cta.title)}</h2>
+          ${cta.body ? `<p>${escapeHtml(cta.body)}</p>` : ""}
+          <div class='hero-actions'>
+            <a class='btn' data-track='lp-final-cta' href='${escapeHtml(cta.primaryCtaHref || "/contact")}'>${escapeHtml(cta.primaryCtaText || "Start your journey now")}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+};
+
 const renderAbout = (data) => {
   const hero = data.hero ?? {};
   const bio = data.bio ?? {};
@@ -712,6 +849,14 @@ const renderers = {
   "specialties-couples": renderSpecialtyPage,
   "specialties-somatic-therapy": renderSpecialtyPage,
   "specialties-divorce": renderSpecialtyPage,
+  "lp-trauma": renderAdLandingPage,
+  "lp-emdr": renderAdLandingPage,
+  "lp-stress-anxiety": renderAdLandingPage,
+  "lp-depression": renderAdLandingPage,
+  "lp-grief-loss": renderAdLandingPage,
+  "lp-couples": renderAdLandingPage,
+  "lp-somatic-therapy": renderAdLandingPage,
+  "lp-divorce": renderAdLandingPage,
   about: renderAbout,
   contact: renderContact,
 };
