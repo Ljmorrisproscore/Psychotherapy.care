@@ -1,7 +1,7 @@
 ---
 hero:
   eyebrow: 
-  title: Holistic Psychotherapy for Anxiety, Trauma, Relationships, and Life Transitions.
+  title: Holistic Psychotherapy for Stress & Anxiety, Trauma, Relationships, and Life Transitions.
   intro: An integrative and supportive approach that blends evidence-based practices with subconscious and somatic tools that support mental, physical and emotional healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
@@ -22,7 +22,7 @@ welcome:
   buttonText: Explore Specialties
   buttonHref: /specialties
   imageSrc: assets/therapist1.png
-  imageAlt: Trauma, Anxiety, Grief and Loss, Change of Life
+  imageAlt: Trauma, Stress & Anxiety, Grief and Loss, Change of Life
 approachIntro:
   eyebrow: What is the Holistic Healing Approach?
   title: Evidence based approaches and whole-person care that honor the full story, not just the symptoms.
