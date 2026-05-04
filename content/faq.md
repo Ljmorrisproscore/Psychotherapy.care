@@ -59,9 +59,9 @@ faq:
     - question: What are your psychotherapy fees?
       answer: |
         For Private Pay and Out of Network Clients, our standard fees per 50-minute session are:
-        Individual Psychotherapy: $165
-        Couples Psychotherapy: $180
-        110 minute Therapy Intensives: $310
+        Individual Psychotherapy: $150
+        Couples Psychotherapy: $175
+        110 minute Therapy Intensives: $280
     - question: Do you take insurance?
       answer: |
         We are a private-pay practice and do not bill insurance directly.
