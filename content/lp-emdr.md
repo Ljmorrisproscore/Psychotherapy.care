@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Integration
     description: Consolidate gains so healing carries into relationships, work, and daily life.
+testimonial:
+  quote: I can't recommend her enough.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: Ready to begin
   title: Explore whether EMDR is right for you.

@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Integration and growth
     description: Strengthen new patterns so healing becomes sustainable in everyday life.
+testimonial:
+  quote: I worked with Darlene for two years and can't recommend her enough. She's a thoughtful listener who offered grounded perspective and practical tools that actually work in real life.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: Ready when you are
   title: You do not have to carry this alone.

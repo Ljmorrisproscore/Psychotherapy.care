@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Maintain long-term resilience
     description: Strengthen sustainable habits that support calm and confidence over time.
+testimonial:
+  quote: She offered practical tools that actually work in real-world situations.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: Start now
   title: You can feel more grounded and in control.

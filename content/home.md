@@ -84,6 +84,12 @@ reasons:
     - number: 6
       title: Evidence-based approaches
       description: Your therapist will help determine the best approaches to lead you on your healing journey.
+testimonial:
+  eyebrow: Client Reviews
+  title: What clients are saying
+  quote: Darlene was my in-person therapist for two years, and I can't recommend her enough. She is an incredibly thoughtful listener who provided a grounded perspective on navigating my relationships, career challenges, and my mental health. She offered practical tools that actually work in real-world situations.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: Ready when you are
   title: You do not have to navigate this alone.

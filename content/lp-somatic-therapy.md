@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Integration in daily life
     description: Apply new patterns in relationships, work, and high-stress moments.
+testimonial:
+  quote: She offered practical tools that actually work in real-world situations.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: Start healing at the root
   title: When the body feels safer, everything can begin to shift.

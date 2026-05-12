@@ -20,6 +20,36 @@ const escapeHtml = (value) =>
 
 const md = (value) => marked.parse(String(value ?? ""));
 
+const renderTestimonialSection = (testimonial, options = {}) => {
+  if (!testimonial || !testimonial.quote) {
+    return "";
+  }
+
+  const sectionClass = options.compact ? "section compact" : "section";
+  const eyebrow = options.eyebrow ?? testimonial.eyebrow;
+  const title = options.title ?? testimonial.title;
+  const sourceLabel = testimonial.sourceLabel ?? testimonial.source ?? "Google Review";
+  const rating = testimonial.rating ?? "";
+  const author = testimonial.author ?? "";
+
+  return `
+    <section class='${sectionClass}'>
+      <div class='container'>
+        ${eyebrow ? `<div class='eyebrow'>${escapeHtml(eyebrow)}</div>` : ""}
+        ${title ? `<h2>${escapeHtml(title)}</h2>` : ""}
+        <article class='card testimonial-card'>
+          <p class='testimonial-quote'>&ldquo;${escapeHtml(testimonial.quote)}&rdquo;</p>
+          <p class='testimonial-meta'>
+            ${author ? `<span>${escapeHtml(author)}</span>` : ""}
+            ${sourceLabel ? `<span>${escapeHtml(sourceLabel)}</span>` : ""}
+            ${rating ? `<span class='testimonial-rating'>${escapeHtml(rating)}</span>` : ""}
+          </p>
+        </article>
+      </div>
+    </section>
+  `;
+};
+
 const parseFrontmatter = (raw) => {
   if (!raw.startsWith("---")) {
     return {};
@@ -46,6 +76,7 @@ const renderHome = (data) => {
   const midpoint = Math.ceil(reasonItems.length / 2);
   const reasonLeft = reasonItems.slice(0, midpoint);
   const reasonRight = reasonItems.slice(midpoint);
+  const testimonial = data.testimonial ?? {};
   const cta = data.cta ?? {};
 
   const renderReason = (item) => `
@@ -152,6 +183,8 @@ const renderHome = (data) => {
         </div>
       </div>
     </section>
+
+    ${renderTestimonialSection(testimonial, { compact: true })}
 
     <section class='section'>
       <div class='container'>
@@ -453,6 +486,7 @@ const renderAdLandingPage = (data) => {
   const sections = data.sections ?? {};
   const highlights = Array.isArray(data.highlights) ? data.highlights : [];
   const steps = Array.isArray(data.steps) ? data.steps : [];
+  const testimonial = data.testimonial ?? {};
   const cta = data.cta ?? {};
 
   return `
@@ -523,6 +557,8 @@ const renderAdLandingPage = (data) => {
         : ""
     }
 
+    ${renderTestimonialSection(testimonial, { compact: true, eyebrow: "Client Review" })}
+
     <section class='section'>
       <div class='container'>
         <div class='cta'>
@@ -543,6 +579,7 @@ const renderAbout = (data) => {
   const bio = data.bio ?? {};
   const bullets = Array.isArray(bio.bullets) ? bio.bullets : [];
   const values = Array.isArray(data.values) ? data.values : [];
+  const testimonial = data.testimonial ?? {};
 
   return `
     <section class='page-hero'>
@@ -584,6 +621,8 @@ const renderAbout = (data) => {
     </section>`
         : ""
     }
+
+    ${renderTestimonialSection(testimonial, { compact: true })}
   `;
 };
 

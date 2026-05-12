@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Long-term relationship resilience
     description: Build sustainable habits that support connection and trust over time.
+testimonial:
+  quote: A thoughtful listener with a grounded perspective on navigating relationships.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: Work on this together
   title: Get support to create a stronger, more connected partnership.

@@ -26,4 +26,10 @@ values:
     description: Therapy works best when it feels like a shared process rather than something done to a client.
   - title: Whole-person care
     description: Healing becomes more sustainable when emotional, relational, and embodied experiences are all included.
+testimonial:
+  eyebrow: Client Reviews
+  title: A recent client reflection
+  quote: I worked with Darlene for two years and can't recommend her enough. She's a thoughtful listener who offered grounded perspective and practical tools that actually work in real life.
+  sourceLabel: Google Review
+  rating: ★★★★★
 ---

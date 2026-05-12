@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Integration and re-engagement
     description: Build a steady path forward that aligns with your values and relationships.
+testimonial:
+  quote: She's a thoughtful listener who offered grounded perspective and practical tools that actually work in real life.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: Support is here
   title: You deserve support through grief, not just after it.

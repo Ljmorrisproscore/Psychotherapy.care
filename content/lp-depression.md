@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Integration and momentum
     description: Strengthen gains and build routines that support sustained emotional health.
+testimonial:
+  quote: She offered practical tools that actually work in real-world situations.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: You do not have to do this alone
   title: Start depression therapy with a clear, compassionate plan.

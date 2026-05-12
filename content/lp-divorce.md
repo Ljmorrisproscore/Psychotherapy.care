@@ -34,6 +34,10 @@ steps:
   - step: Phase 3
     title: Move forward with confidence
     description: Build sustainable patterns for resilience, relationships, and long-term wellbeing.
+testimonial:
+  quote: Her grounded perspective helped me navigate career challenges with more clarity.
+  sourceLabel: Google Review
+  rating: ★★★★★
 cta:
   eyebrow: You do not have to navigate this alone
   title: Begin divorce support therapy with a plan designed for your needs.
