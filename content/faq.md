@@ -49,7 +49,7 @@ faq:
         Yes. We provide secure, HIPAA-compliant telehealth counseling services. Telehealth can be a convenient option for individuals, teens and couples with busy schedules. Additional consent forms and emergency contact information are required for telehealth services.
     - question: How do I pay for therapy services?
       answer: |
-        Payment is due at the time of each session. Part of the intake process will include providing debit and/or credit card information to your client page. This will be the card that Holistic Healing Psychotherapy will charge for the service. Payments are usually processed by the day after your session. If you would like to use a different method of payment (cash or another credit card) this can be arranged.
+        Payment is due at the time of each session. However, we are in the process of being able to accept several insurance providers. Part of the intake process will include providing debit and/or credit card information to your client page. This will be the card that Holistic Healing Psychotherapy will charge for the service. Payments are usually processed by the day after your session. If you would like to use a different method of payment (cash or another credit card) this can be arranged. We also are able to provide a "Super Bill" for you to submit to your insurance provider.
 
         We accept:
         Cash
@@ -64,16 +64,7 @@ faq:
         110 minute Therapy Intensives: $280
     - question: Do you take insurance?
       answer: |
-        We are a private-pay practice and do not bill insurance directly.
-        
-        We do provide Superbills for clients who want to use out-of-network benefits through eligible PPO plans.
-    - question: What is the benefit of a private-pay provider?
-      answer: |
-        Being private pay allows us to build treatment around what is best for you, not around insurance restrictions.
-
-        This means we can personalize your care, choose the approaches that fit your goals, and focus on the pace and depth that support meaningful progress. It also gives us more flexibility in session planning, protects your privacy by limiting what is shared with third-party payers, and helps us stay centered on clinical quality rather than billing requirements.
-
-        Our goal is to provide thoughtful, individualized care that truly serves your needs.
+        Soon, yes. We are currently in the process being able to accept several insurances such as Aetna, Medicare, Blue Cross, and Blue Shield. This process takes time, and we hope to be completed within a couple of months.  However, we do also provide Superbills for clients who want to use out-of-network benefits through eligible PPO plans.
     - question: What is a Superbill?
       answer: |
         A superbill is a detailed invoice used in healthcare settings that includes information about the services provided to a patient. Typically, it contains codes for diagnoses and procedures (CPT and ICD codes). A superbill serves as a record for insurance claims and reimbursement and is often used by healthcare providers to streamline billing processes.
