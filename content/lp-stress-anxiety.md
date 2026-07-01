@@ -35,8 +35,8 @@ steps:
     title: Maintain long-term resilience
     description: Strengthen sustainable habits that support calm and confidence over time.
 testimonial:
-  quote: She offered practical tools that actually work in real-world situations.
-  sourceLabel: Google Review
+  quote: I really appreciate how adaptable she is and how she meets me where I am, supporting whatever I need in each session.
+  sourceLabel: Google and Yelp Review
   rating: ★★★★★
 cta:
   eyebrow: Start now

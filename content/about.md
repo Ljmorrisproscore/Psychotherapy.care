@@ -16,10 +16,8 @@ bio:
     - Whole-person, integrative approach with evidence-based foundations
     - In-person sessions in San Marcos, CA and secure telehealth across California
     - Private pay with Superbills available for out-of-network PPO benefits
-    - Currently completing panelling process for: Aetna, Blue Cross, Blue Shield, Sharp Healthcare, Medical, Medicare, TriCare, and Signa
+    - "Currently completing panelling process for: Aetna, Blue Cross, Blue Shield, Sharp Healthcare, Medical, Medicare, TriCare, and Signa"
 
-
-    
   imageSrc: assets/DarlenePic.png
   imageAlt: Portrait of therapist Darlene
 values:

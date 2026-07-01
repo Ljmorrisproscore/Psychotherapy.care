@@ -35,8 +35,8 @@ steps:
     title: Integration and growth
     description: Strengthen new patterns so healing becomes sustainable in everyday life.
 testimonial:
-  quote: I worked with Darlene for two years and can't recommend her enough. She's a thoughtful listener who offered grounded perspective and practical tools that actually work in real life.
-  sourceLabel: Google Review
+  quote: She made me feel comfortable from the very beginning, and I was able to build trust with her much more quickly than I expected.
+  sourceLabel: Google and Yelp Review
   rating: ★★★★★
 cta:
   eyebrow: Ready when you are

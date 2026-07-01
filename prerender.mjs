@@ -626,6 +626,69 @@ const renderAbout = (data) => {
   `;
 };
 
+const renderReviews = (data) => {
+  const hero = data.hero ?? {};
+  const intro = data.intro ?? {};
+  const reviews = Array.isArray(data.reviews) ? data.reviews : [];
+  const cta = data.cta ?? {};
+
+  const renderReviewCard = (review) => `
+    <article class='card testimonial-card'>
+      ${review.title ? `<h3>${escapeHtml(review.title)}</h3>` : ""}
+      <p class='testimonial-quote'>&ldquo;${escapeHtml(review.quote)}&rdquo;</p>
+      <p class='testimonial-meta'>
+        ${review.author ? `<span>${escapeHtml(review.author)}</span>` : ""}
+        ${review.sourceLabel ? `<span>${escapeHtml(review.sourceLabel)}</span>` : ""}
+        ${review.rating ? `<span class='testimonial-rating'>${escapeHtml(review.rating)}</span>` : ""}
+      </p>
+    </article>
+  `;
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        ${hero.intro ? md(hero.intro) : ""}
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container'>
+        ${intro.eyebrow ? `<div class='eyebrow'>${escapeHtml(intro.eyebrow)}</div>` : ""}
+        ${intro.title ? `<h2>${escapeHtml(intro.title)}</h2>` : ""}
+        ${intro.body ? md(intro.body) : ""}
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container'>
+        <div class='review-list'>
+          ${reviews.map(renderReviewCard).join("")}
+        </div>
+      </div>
+    </section>
+
+    ${
+      cta.title
+        ? `<section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <h2>${escapeHtml(cta.title)}</h2>
+          ${cta.body ? `<p>${escapeHtml(cta.body)}</p>` : ""}
+          ${
+            cta.primaryCtaText && cta.primaryCtaHref
+              ? `<div class='hero-actions'><a class='btn' href='${escapeHtml(cta.primaryCtaHref)}'>${escapeHtml(cta.primaryCtaText)}</a></div>`
+              : ""
+          }
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
+  `;
+};
+
 const renderContact = (data) => {
   const hero = data.hero ?? {};
   const form = data.form ?? {};
@@ -874,6 +937,7 @@ const renderers = {
   "online-therapy-california": renderLocalLanding,
   "teen-therapy-san-marcos": renderLocalLanding,
   about: renderAbout,
+  reviews: renderReviews,
   contact: renderContact,
 };
 

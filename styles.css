@@ -327,6 +327,14 @@ p { margin: 0 0 16px; color: var(--muted); }
   color: #9b7a2f;
   font-weight: 600;
 }
+.review-list {
+  display: grid;
+  gap: 20px;
+}
+.review-list .testimonial-card {
+  max-width: none;
+  margin: 0;
+}
 .footer {
   padding: 42px 0 72px;
   border-top: 1px solid var(--line);
