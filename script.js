@@ -78,6 +78,11 @@ const specialtyMenuItems = [
   { label: "Divorce", href: "/specialties-divorce" },
 ];
 
+const aboutMenuItems = [
+  { label: "About Us", href: "/about" },
+  { label: "Reviews", href: "/reviews" },
+];
+
 const normalizePath = (path) => {
   const sanitized = String(path ?? "").replace(/\/+$/, "");
   if (!sanitized || sanitized === "/index" || sanitized === "/index.html") {
@@ -206,6 +211,125 @@ const initSpecialtiesSubmenu = () => {
   specialtiesLink.replaceWith(dropdown);
 };
 
+const initAboutSubmenu = () => {
+  const navLinks = document.querySelector(".nav-links");
+  if (!navLinks) {
+    return;
+  }
+
+  const aboutLink = navLinks.querySelector("a[href='/about'], a[href='/about/']");
+  if (!aboutLink) {
+    return;
+  }
+
+  const currentPath = normalizePath(window.location.pathname);
+  const isAboutMenuPage = aboutMenuItems.some((item) => normalizePath(item.href) === currentPath);
+
+  const dropdown = document.createElement("div");
+  dropdown.className = "nav-dropdown";
+  if (aboutLink.classList.contains("active") || isAboutMenuPage) {
+    dropdown.classList.add("is-active");
+  }
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "nav-dropdown-toggle";
+  toggle.textContent = "About Us";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Toggle about menu");
+
+  const menu = document.createElement("div");
+  menu.className = "nav-submenu";
+  menu.id = "about-submenu";
+  toggle.setAttribute("aria-controls", menu.id);
+
+  aboutMenuItems.forEach((item) => {
+    const link = document.createElement("a");
+    link.href = item.href;
+    link.textContent = item.label;
+    if (normalizePath(item.href) === currentPath) {
+      link.classList.add("active");
+      toggle.setAttribute("aria-current", "page");
+    }
+    menu.append(link);
+  });
+
+  let closeTimer = null;
+  const supportsHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  const clearCloseTimer = () => {
+    if (closeTimer) {
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+  };
+
+  const setOpen = (open) => {
+    clearCloseTimer();
+    dropdown.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  };
+
+  const scheduleClose = () => {
+    clearCloseTimer();
+    closeTimer = window.setTimeout(() => {
+      if (!dropdown.matches(":focus-within")) {
+        setOpen(false);
+      }
+    }, 180);
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setOpen(!dropdown.classList.contains("open"));
+  });
+
+  if (supportsHover) {
+    dropdown.addEventListener("mouseenter", () => {
+      setOpen(true);
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      scheduleClose();
+    });
+  }
+
+  dropdown.addEventListener("focusin", () => {
+    setOpen(true);
+  });
+
+  dropdown.addEventListener("focusout", () => {
+    window.requestAnimationFrame(() => {
+      if (!dropdown.contains(document.activeElement)) {
+        scheduleClose();
+      }
+    });
+  });
+
+  dropdown.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!dropdown.contains(event.target)) {
+      setOpen(false);
+    }
+  });
+
+  menu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setOpen(false);
+    }
+  });
+
+  dropdown.append(toggle, menu);
+  aboutLink.replaceWith(dropdown);
+};
+
 const initMainMenu = () => {
   const toggle = document.querySelector(".menu-toggle");
   const links = document.querySelector(".nav-links");
@@ -214,31 +338,9 @@ const initMainMenu = () => {
   }
 };
 
-const initReviewsNavLink = () => {
-  const navLinks = document.querySelector(".nav-links");
-  if (!navLinks || navLinks.querySelector("a[href='/reviews'], a[href='/reviews/']")) {
-    return;
-  }
-
-  const reviewsLink = document.createElement("a");
-  reviewsLink.href = "/reviews";
-  reviewsLink.textContent = "Reviews";
-  if (normalizePath(window.location.pathname) === "/reviews") {
-    reviewsLink.classList.add("active");
-  }
-
-  const faqLink = navLinks.querySelector("a[href='/faq'], a[href='/faq/']");
-  if (faqLink) {
-    navLinks.insertBefore(reviewsLink, faqLink);
-    return;
-  }
-
-  navLinks.append(reviewsLink);
-};
-
 initSpecialtiesSubmenu();
+initAboutSubmenu();
 initMainMenu();
-initReviewsNavLink();
 
 marked.setOptions({ breaks: true });
 
