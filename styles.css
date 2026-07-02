@@ -327,6 +327,18 @@ p { margin: 0 0 16px; color: var(--muted); }
   color: #9b7a2f;
   font-weight: 600;
 }
+.testimonial-more-link {
+  margin: 12px 0 0;
+  font-size: .9rem;
+}
+.testimonial-more-link a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.testimonial-more-link a:hover {
+  color: var(--text);
+}
 .review-list {
   display: grid;
   gap: 20px;

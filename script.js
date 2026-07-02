@@ -365,6 +365,8 @@ const renderTestimonialSection = (testimonial, options = {}) => {
   const sourceLabel = testimonial.sourceLabel ?? testimonial.source ?? "Google Review";
   const rating = testimonial.rating ?? "";
   const author = testimonial.author ?? "";
+  const moreReviewsText = options.moreReviewsText ?? testimonial.moreReviewsText ?? "";
+  const moreReviewsHref = options.moreReviewsHref ?? testimonial.moreReviewsHref ?? "";
 
   return `
     <section class='${sectionClass}'>
@@ -378,6 +380,11 @@ const renderTestimonialSection = (testimonial, options = {}) => {
             ${sourceLabel ? `<span>${escapeHtml(sourceLabel)}</span>` : ""}
             ${rating ? `<span class='testimonial-rating'>${escapeHtml(rating)}</span>` : ""}
           </p>
+          ${
+            moreReviewsText && moreReviewsHref
+              ? `<p class='testimonial-more-link'><a href='${escapeHtml(moreReviewsHref)}'>${escapeHtml(moreReviewsText)}</a></p>`
+              : ""
+          }
         </article>
       </div>
     </section>
