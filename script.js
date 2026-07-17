@@ -1140,6 +1140,7 @@ const renderReviews = (data) => {
   const intro = data.intro ?? {};
   const reviews = Array.isArray(data.reviews) ? data.reviews : [];
   const cta = data.cta ?? {};
+  const hasIntro = Boolean(intro.eyebrow || intro.title || intro.body);
 
   const renderReviewCard = (review) => `
     <article class='card testimonial-card'>
@@ -1162,13 +1163,17 @@ const renderReviews = (data) => {
       </div>
     </section>
 
-    <section class='section compact'>
+    ${
+      hasIntro
+        ? `<section class='section compact'>
       <div class='container'>
         ${intro.eyebrow ? `<div class='eyebrow'>${escapeHtml(intro.eyebrow)}</div>` : ""}
         ${intro.title ? `<h2>${escapeHtml(intro.title)}</h2>` : ""}
         ${intro.body ? md(intro.body) : ""}
       </div>
-    </section>
+    </section>`
+        : ""
+    }
 
     <section class='section compact'>
       <div class='container'>
