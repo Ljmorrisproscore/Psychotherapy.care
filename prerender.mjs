@@ -707,6 +707,23 @@ const renderOurLocation = (data) => {
   const map = data.map ?? {};
   const gallery = data.gallery ?? {};
   const photos = Array.isArray(gallery.photos) ? gallery.photos : [];
+  const sortedPhotos = [...photos].sort((a, b) => {
+    const getSortKey = (photo) => {
+      const filename = String(photo?.src ?? "").split("/").pop() ?? "";
+      const baseName = filename.replace(/\.[^.]+$/, "");
+      const numericPrefix = Number.parseInt(baseName, 10);
+      if (Number.isNaN(numericPrefix)) {
+        return Number.MAX_SAFE_INTEGER;
+      }
+      return numericPrefix;
+    };
+    const keyA = getSortKey(a);
+    const keyB = getSortKey(b);
+    if (keyA !== keyB) {
+      return keyA - keyB;
+    }
+    return String(a?.src ?? "").localeCompare(String(b?.src ?? ""));
+  });
   const cta = data.cta ?? {};
   const layoutPattern = [
     "wide",
@@ -734,6 +751,24 @@ const renderOurLocation = (data) => {
 
     <section class='section compact'>
       <div class='container'>
+        ${gallery.eyebrow ? `<div class='eyebrow'>${escapeHtml(gallery.eyebrow)}</div>` : ""}
+        ${gallery.title ? `<h2>${escapeHtml(gallery.title)}</h2>` : ""}
+        <div class='location-gallery'>
+          ${sortedPhotos
+            .map((photo, index) => {
+              const layout = layoutPattern[index % layoutPattern.length];
+              return `
+            <figure class='location-gallery-item location-gallery-item--${layout}'>
+              <img src='${escapeHtml(photo.src)}' alt='${escapeHtml(photo.alt || "Office location photo")}' loading='lazy'>
+            </figure>`;
+            })
+            .join("")}
+        </div>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container'>
         <div class='grid-2 location-top-row'>
           <article class='card'>
             <h2>${escapeHtml(location.title)}</h2>
@@ -752,24 +787,6 @@ const renderOurLocation = (data) => {
                 : ""
             }
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class='section compact'>
-      <div class='container'>
-        ${gallery.eyebrow ? `<div class='eyebrow'>${escapeHtml(gallery.eyebrow)}</div>` : ""}
-        ${gallery.title ? `<h2>${escapeHtml(gallery.title)}</h2>` : ""}
-        <div class='location-gallery'>
-          ${photos
-            .map((photo, index) => {
-              const layout = layoutPattern[index % layoutPattern.length];
-              return `
-            <figure class='location-gallery-item location-gallery-item--${layout}'>
-              <img src='${escapeHtml(photo.src)}' alt='${escapeHtml(photo.alt || "Office location photo")}' loading='lazy'>
-            </figure>`;
-            })
-            .join("")}
         </div>
       </div>
     </section>
