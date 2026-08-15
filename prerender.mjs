@@ -705,6 +705,11 @@ const renderContact = (data) => {
   const hero = data.hero ?? {};
   const form = data.form ?? {};
   const details = data.details ?? {};
+  const mapEmbedSrc = details.mapEmbedSrc ?? "";
+  const mapDirectionsHref = details.mapDirectionsHref ?? "";
+  const mapDirectionsText = details.mapDirectionsText ?? "Get Directions";
+  const locationImageSrc = details.locationImageSrc ?? "";
+  const locationImageAlt = details.locationImageAlt ?? "Office location photo";
 
   return `
     <section class='page-hero'>
@@ -716,7 +721,7 @@ const renderContact = (data) => {
     </section>
 
     <section class='section compact'>
-      <div class='container grid-2'>
+      <div class='container grid-2 contact-layout'>
         <div class='card'>
           <h2>${escapeHtml(form.title)}</h2>
           <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
@@ -732,14 +737,33 @@ const renderContact = (data) => {
           </form>
           <p class='small' style='margin-top:12px;'>${escapeHtml(form.note)}</p>
         </div>
-        <div class='card'>
-          <h2>${escapeHtml(details.title)}</h2>
-          <p><strong>Location:</strong> ${escapeHtml(details.location)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(details.email)}</p>
-          <p><strong>Phone:</strong> ${escapeHtml(details.phone)}</p>
-          <p><strong>Hours:</strong> ${escapeHtml(details.hours)}</p>
-          <p><strong>Consultations:</strong> ${escapeHtml(details.consultations)}</p>
-          ${details.license ? `<p><strong>License:</strong> ${escapeHtml(details.license)}</p>` : ""}
+        <div class='contact-side'>
+          <div class='card'>
+            <h2>${escapeHtml(details.title)}</h2>
+            <p><strong>Location:</strong> ${escapeHtml(details.location)}</p>
+            <p><strong>Email:</strong> ${escapeHtml(details.email)}</p>
+            <p><strong>Phone:</strong> ${escapeHtml(details.phone)}</p>
+            <p><strong>Hours:</strong> ${escapeHtml(details.hours)}</p>
+            <p><strong>Consultations:</strong> ${escapeHtml(details.consultations)}</p>
+            ${details.license ? `<p><strong>License:</strong> ${escapeHtml(details.license)}</p>` : ""}
+          </div>
+          ${
+            mapEmbedSrc || locationImageSrc
+              ? `<div class='card contact-map-card'>
+            ${mapEmbedSrc ? `<iframe class='contact-map-embed' src='${escapeHtml(mapEmbedSrc)}' loading='lazy' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen title='Map to Holistic Healing Psychotherapy'></iframe>` : ""}
+            ${
+              mapDirectionsHref
+                ? `<div class='contact-map-actions'><a class='btn secondary' href='${escapeHtml(mapDirectionsHref)}' target='_blank' rel='noopener noreferrer'>${escapeHtml(mapDirectionsText)}</a></div>`
+                : ""
+            }
+            ${
+              locationImageSrc
+                ? `<div class='contact-location-photo'><img src='${escapeHtml(locationImageSrc)}' alt='${escapeHtml(locationImageAlt)}'></div>`
+                : ""
+            }
+          </div>`
+              : ""
+          }
         </div>
       </div>
     </section>

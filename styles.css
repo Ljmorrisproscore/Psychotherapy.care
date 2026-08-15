@@ -440,6 +440,36 @@ p { margin: 0 0 16px; color: var(--muted); }
   display: grid;
   gap: 16px;
 }
+.contact-layout {
+  align-items: flex-start;
+}
+.contact-side {
+  display: grid;
+  gap: 18px;
+}
+.contact-map-card {
+  padding: 20px;
+}
+.contact-map-embed {
+  width: 100%;
+  min-height: 280px;
+  border: 0;
+  border-radius: 14px;
+}
+.contact-map-actions {
+  margin-top: 14px;
+}
+.contact-location-photo {
+  margin-top: 16px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.contact-location-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
 .input, textarea {
   width: 100%;
   padding: 15px 16px;
