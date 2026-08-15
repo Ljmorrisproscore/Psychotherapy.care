@@ -81,6 +81,7 @@ const specialtyMenuItems = [
 const aboutMenuItems = [
   { label: "About Us", href: "/about" },
   { label: "Reviews", href: "/reviews" },
+  { label: "Our Location", href: "/our-location" },
 ];
 
 const normalizePath = (path) => {
@@ -1203,6 +1204,99 @@ const renderReviews = (data) => {
   `;
 };
 
+const renderOurLocation = (data) => {
+  const hero = data.hero ?? {};
+  const location = data.location ?? {};
+  const map = data.map ?? {};
+  const gallery = data.gallery ?? {};
+  const photos = Array.isArray(gallery.photos) ? gallery.photos : [];
+  const cta = data.cta ?? {};
+  const layoutPattern = [
+    "wide",
+    "tall",
+    "standard",
+    "wide",
+    "standard",
+    "tall",
+    "wide",
+    "standard",
+    "tall",
+    "wide",
+    "standard",
+    "tall",
+  ];
+
+  return `
+    <section class='page-hero'>
+      <div class='container'>
+        <div class='eyebrow'>${escapeHtml(hero.eyebrow)}</div>
+        <h1>${escapeHtml(hero.title)}</h1>
+        ${hero.intro ? md(hero.intro) : ""}
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container'>
+        <div class='grid-2 location-top-row'>
+          <article class='card'>
+            <h2>${escapeHtml(location.title)}</h2>
+            <p><strong>Address:</strong> ${escapeHtml(location.address)}</p>
+            <p><strong>Phone:</strong> ${escapeHtml(location.phone)}</p>
+          </article>
+          <article class='card location-map-card'>
+            ${
+              map.embedSrc
+                ? `<iframe class='location-map-embed' src='${escapeHtml(map.embedSrc)}' loading='lazy' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen title='Map to Holistic Healing Psychotherapy'></iframe>`
+                : ""
+            }
+            ${
+              map.directionsHref
+                ? `<div class='location-map-actions'><a class='btn secondary' href='${escapeHtml(map.directionsHref)}' target='_blank' rel='noopener noreferrer'>${escapeHtml(map.directionsText || "Get Directions")}</a></div>`
+                : ""
+            }
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class='section compact'>
+      <div class='container'>
+        ${gallery.eyebrow ? `<div class='eyebrow'>${escapeHtml(gallery.eyebrow)}</div>` : ""}
+        ${gallery.title ? `<h2>${escapeHtml(gallery.title)}</h2>` : ""}
+        <div class='location-gallery'>
+          ${photos
+            .map((photo, index) => {
+              const layout = layoutPattern[index % layoutPattern.length];
+              return `
+            <figure class='location-gallery-item location-gallery-item--${layout}'>
+              <img src='${escapeHtml(photo.src)}' alt='${escapeHtml(photo.alt || "Office location photo")}' loading='lazy'>
+            </figure>`;
+            })
+            .join("")}
+        </div>
+      </div>
+    </section>
+
+    ${
+      cta.title
+        ? `<section class='section'>
+      <div class='container'>
+        <div class='cta'>
+          <h2>${escapeHtml(cta.title)}</h2>
+          ${cta.body ? `<p>${escapeHtml(cta.body)}</p>` : ""}
+          ${
+            cta.primaryCtaText && cta.primaryCtaHref
+              ? `<div class='hero-actions'><a class='btn' href='${escapeHtml(cta.primaryCtaHref)}'>${escapeHtml(cta.primaryCtaText)}</a></div>`
+              : ""
+          }
+        </div>
+      </div>
+    </section>`
+        : ""
+    }
+  `;
+};
+
 const renderContact = (data) => {
   const hero = data.hero ?? {};
   const form = data.form ?? {};
@@ -1309,6 +1403,7 @@ const renderers = {
   "teen-therapy-san-marcos": renderLocalLanding,
   about: renderAbout,
   reviews: renderReviews,
+  "our-location": renderOurLocation,
   contact: renderContact,
 };
 
