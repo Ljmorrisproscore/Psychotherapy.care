@@ -82,24 +82,24 @@
     </section>
 
     <section class='section compact'>
-      <div class='container grid-2 contact-layout'>
-        <div class='card'>
-          <h2>Reach out</h2>
-          <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
-            <input type='hidden' name='form-name' value='contact'>
-            <p style='display:none;'>
-              <label>Do not fill this out: <input name='bot-field'></label>
-            </p>
-            <input class='input' type='text' name='name' placeholder='Name' required>
-            <input class='input' type='email' name='email' placeholder='Email' required>
-            <input class='input' type='text' name='phone' placeholder='Phone'>
-            <textarea name='message' placeholder='How can we help you?' required></textarea>
-            <button class='btn' type='submit'>Send Inquiry</button>
-          </form>
-          <p class='small' style='margin-top:12px;'>.</p>
-        </div>
-        <div class='contact-side'>
-          <div class='card'>
+      <div class='container contact-layout'>
+        <div class='grid-2 contact-top-row'>
+          <div class='card contact-form-card'>
+            <h2>Reach out</h2>
+            <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
+              <input type='hidden' name='form-name' value='contact'>
+              <p style='display:none;'>
+                <label>Do not fill this out: <input name='bot-field'></label>
+              </p>
+              <input class='input' type='text' name='name' placeholder='Name' required>
+              <input class='input' type='email' name='email' placeholder='Email' required>
+              <input class='input' type='text' name='phone' placeholder='Phone'>
+              <textarea name='message' placeholder='How can we help you?' required></textarea>
+              <button class='btn' type='submit'>Send Inquiry</button>
+            </form>
+            <p class='small' style='margin-top:12px;'>.</p>
+          </div>
+          <div class='card contact-details-card'>
             <h2>Holistic Healing Psychotherapy</h2>
             <p><strong>Location:</strong> 338 Via Vera Cruz, Suite 260, San Marcos, CA 92078</p>
             <p><strong>Email:</strong> info@psychotherapy.care</p>
@@ -108,11 +108,13 @@
             <p><strong>Consultations:</strong> We are happy to offer a complimentary 15 minute consultation.</p>
             <p><strong>License:</strong> LMFT #161549 - Darlene Morris, Licensed Marriage and Family Therapist</p>
           </div>
+        </div>
+        <div class='grid-2 contact-location-row'>
           <div class='card contact-map-card'>
             <iframe class='contact-map-embed' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3340.9549012828725!2d-117.19307932385192!3d33.136549365524935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc7545e63bc953%3A0x7d4b6e9610650639!2s338%20Via%20Vera%20Cruz%20Ste%20260%2C%20San%20Marcos%2C%20CA%2092078!5e0!3m2!1sen!2sus!4v1786823319115!5m2!1sen!2sus' loading='lazy' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen title='Map to Holistic Healing Psychotherapy'></iframe>
             <div class='contact-map-actions'><a class='btn secondary' href='https://www.google.com/maps/dir/?api=1&amp;destination=338+Via+Vera+Cruz+Ste+260,+San+Marcos,+CA+92078' target='_blank' rel='noopener noreferrer'>Get Directions</a></div>
-            <div class='contact-location-photo'><img src='assets/location-office-1.png' alt='Exterior of office location at 338 Via Vera Cruz'></div>
           </div>
+          <div class='card contact-photo-card'><div class='contact-location-photo'><img src='assets/location-office-1.png' alt='Exterior of office location at 338 Via Vera Cruz'></div></div>
         </div>
       </div>
     </section>

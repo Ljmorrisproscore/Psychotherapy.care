@@ -441,26 +441,34 @@ p { margin: 0 0 16px; color: var(--muted); }
   gap: 16px;
 }
 .contact-layout {
-  align-items: flex-start;
-}
-.contact-side {
   display: grid;
   gap: 18px;
+}
+.contact-top-row {
+  align-items: stretch;
+}
+.contact-top-row .card {
+  height: 100%;
+}
+.contact-location-row {
+  align-items: flex-start;
 }
 .contact-map-card {
   padding: 20px;
 }
 .contact-map-embed {
   width: 100%;
-  min-height: 280px;
+  min-height: 320px;
   border: 0;
   border-radius: 14px;
 }
 .contact-map-actions {
   margin-top: 14px;
 }
+.contact-photo-card {
+  padding: 16px;
+}
 .contact-location-photo {
-  margin-top: 16px;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--line);

@@ -1223,24 +1223,24 @@ const renderContact = (data) => {
     </section>
 
     <section class='section compact'>
-      <div class='container grid-2 contact-layout'>
-        <div class='card'>
-          <h2>${escapeHtml(form.title)}</h2>
-          <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
-            <input type='hidden' name='form-name' value='contact'>
-            <p style='display:none;'>
-              <label>Do not fill this out: <input name='bot-field'></label>
-            </p>
-            <input class='input' type='text' name='name' placeholder='${escapeHtml(form.namePlaceholder)}' required>
-            <input class='input' type='email' name='email' placeholder='${escapeHtml(form.emailPlaceholder)}' required>
-            <input class='input' type='text' name='phone' placeholder='${escapeHtml(form.phonePlaceholder)}'>
-            <textarea name='message' placeholder='${escapeHtml(form.messagePlaceholder)}' required></textarea>
-            <button class='btn' type='submit'>${escapeHtml(form.buttonText)}</button>
-          </form>
-          <p class='small' style='margin-top:12px;'>${escapeHtml(form.note)}</p>
-        </div>
-        <div class='contact-side'>
-          <div class='card'>
+      <div class='container contact-layout'>
+        <div class='grid-2 contact-top-row'>
+          <div class='card contact-form-card'>
+            <h2>${escapeHtml(form.title)}</h2>
+            <form class='contact-form' name='contact' method='POST' data-netlify='true' netlify-honeypot='bot-field' action='/thank-you.html'>
+              <input type='hidden' name='form-name' value='contact'>
+              <p style='display:none;'>
+                <label>Do not fill this out: <input name='bot-field'></label>
+              </p>
+              <input class='input' type='text' name='name' placeholder='${escapeHtml(form.namePlaceholder)}' required>
+              <input class='input' type='email' name='email' placeholder='${escapeHtml(form.emailPlaceholder)}' required>
+              <input class='input' type='text' name='phone' placeholder='${escapeHtml(form.phonePlaceholder)}'>
+              <textarea name='message' placeholder='${escapeHtml(form.messagePlaceholder)}' required></textarea>
+              <button class='btn' type='submit'>${escapeHtml(form.buttonText)}</button>
+            </form>
+            <p class='small' style='margin-top:12px;'>${escapeHtml(form.note)}</p>
+          </div>
+          <div class='card contact-details-card'>
             <h2>${escapeHtml(details.title)}</h2>
             <p><strong>Location:</strong> ${escapeHtml(details.location)}</p>
             <p><strong>Email:</strong> ${escapeHtml(details.email)}</p>
@@ -1249,24 +1249,30 @@ const renderContact = (data) => {
             <p><strong>Consultations:</strong> ${escapeHtml(details.consultations)}</p>
             ${details.license ? `<p><strong>License:</strong> ${escapeHtml(details.license)}</p>` : ""}
           </div>
+        </div>
+        ${
+          mapEmbedSrc || locationImageSrc
+            ? `<div class='grid-2 contact-location-row'>
           ${
-            mapEmbedSrc || locationImageSrc
+            mapEmbedSrc
               ? `<div class='card contact-map-card'>
-            ${mapEmbedSrc ? `<iframe class='contact-map-embed' src='${escapeHtml(mapEmbedSrc)}' loading='lazy' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen title='Map to Holistic Healing Psychotherapy'></iframe>` : ""}
+            <iframe class='contact-map-embed' src='${escapeHtml(mapEmbedSrc)}' loading='lazy' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen title='Map to Holistic Healing Psychotherapy'></iframe>
             ${
               mapDirectionsHref
                 ? `<div class='contact-map-actions'><a class='btn secondary' href='${escapeHtml(mapDirectionsHref)}' target='_blank' rel='noopener noreferrer'>${escapeHtml(mapDirectionsText)}</a></div>`
                 : ""
             }
-            ${
-              locationImageSrc
-                ? `<div class='contact-location-photo'><img src='${escapeHtml(locationImageSrc)}' alt='${escapeHtml(locationImageAlt)}'></div>`
-                : ""
-            }
           </div>`
               : ""
           }
-        </div>
+          ${
+            locationImageSrc
+              ? `<div class='card contact-photo-card'><div class='contact-location-photo'><img src='${escapeHtml(locationImageSrc)}' alt='${escapeHtml(locationImageAlt)}'></div></div>`
+              : ""
+          }
+        </div>`
+            : ""
+        }
       </div>
     </section>
   `;
