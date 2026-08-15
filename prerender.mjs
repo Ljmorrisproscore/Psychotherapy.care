@@ -757,8 +757,10 @@ const renderOurLocation = (data) => {
           ${sortedPhotos
             .map((photo, index) => {
               const layout = layoutPattern[index % layoutPattern.length];
+              const filename = String(photo?.src ?? "").split("/").pop() ?? "";
+              const photoId = filename.replace(/\.[^.]+$/, "").replace(/[^a-zA-Z0-9_-]/g, "");
               return `
-            <figure class='location-gallery-item location-gallery-item--${layout}'>
+            <figure class='location-gallery-item location-gallery-item--${layout} location-photo-${escapeHtml(photoId)}'>
               <img src='${escapeHtml(photo.src)}' alt='${escapeHtml(photo.alt || "Office location photo")}' loading='lazy'>
             </figure>`;
             })
