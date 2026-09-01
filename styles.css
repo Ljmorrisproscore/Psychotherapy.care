@@ -230,6 +230,9 @@ p { margin: 0 0 16px; color: var(--muted); }
   display: flex;
   justify-content: center;
 }
+.about-bio-grid {
+  align-items: flex-start;
+}
 .about-portrait img {
   width: min(100%, 430px);
   height: auto;
