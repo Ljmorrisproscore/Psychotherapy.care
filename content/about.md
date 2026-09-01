@@ -7,7 +7,17 @@ bio:
   body: |
     Holistic Healing Psychotherapy is a private psychology practice in San Marcos, CA, founded by Darlene Morris, LMFT (License #161549). The practice serves adults, couples, teens, and families both in-person and via secure telehealth across California.
 
-    The vision behind the practice is to integrate traditional, evidence-based psychotherapy methods - including EMDR, CBT, ACT, psychodynamic, Gestalt, Gottman, and solution-focused therapy - with holistic healing practices such as mindfulness training, somatic experiencing, Polyvagal work, expressive art therapy, and energy healing that honor the mind, body, and spirit.
+    We utilize a holistic and highly integrative approach that helps overwhelmed individuals feel calmer in daily life. Our supportive approach blends evidence-based practices with subconscious and somatic tools that support mental, physical, and emotional healing.
+
+    We help overwhelmed individuals feel calmer, more stable, present, and content in daily life. Our approach is designed to empower you toward lasting change with practical support, encouragement, and whole-person care.
+
+    Our approach goes beyond talk therapy by integrating mind, body, and spirit. Always trauma-informed and compassion-led, we utilize methods such as mindfulness training, EMDR (Eye Movement Desensitization and Reprocessing), CBT (Cognitive Behavioral Therapy), compassion-focused, existential, and narrative therapy, Acceptance and Commitment Therapy, Somatic Experiencing, bodywork, and energy healing to help calm overwhelm, reduce stress, release trauma, and promote deep emotional and spiritual healing.
+
+    By treating root causes, not just symptoms, our approach supports lasting transformation and growth. Our approach to treatment recognizes that emotional pain is rarely one-dimensional. We work with thoughts, feelings, body sensations, nervous system responses, relationship patterns, beliefs, and lived experience so therapy supports the whole person.
+
+    This means blending evidence-based care with mindfulness practices, body awareness, subconscious healing tools, and a deeply personalized treatment plan designed to help you feel safer, clearer, and more empowered over time.
+
+    Many people who have worked with us have tried traditional talk therapy and not felt better. They often feel as if they spend all their therapy time exploring and maybe gaining insight, but not making practical changes that reduce distress and impairment. Our approach helps individuals actually feel differently and experience true healing and transformation.
 
     **Currently accepting new clients.** Free 15-minute consultations available.
 
