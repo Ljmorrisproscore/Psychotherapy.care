@@ -1,8 +1,11 @@
 ---
 hero:
-  eyebrow: 
-  title: Holistic Psychotherapy for Stress & Anxiety, Trauma, Relationships, and Life Transitions.
-  intro: An integrative and supportive approach that blends evidence-based practices with subconscious and somatic tools that support mental, physical and emotional healing.
+  eyebrow:
+  title: Feeling Overwhelmed?
+  intro: |
+    We provide Holistic Psychotherapy for Stress & Anxiety, Trauma, Relationships, and Life Transitions.
+
+    An integrative and supportive approach that blends evidence-based practices with subconscious and somatic tools that support mental, physical, and emotional healing.
   primaryCtaText: Begin Your Healing Journey
   primaryCtaHref: /contact
   secondaryCtaText: Learn About the Approach

@@ -196,6 +196,10 @@ p { margin: 0 0 16px; color: var(--muted); }
 .hero h1 {
   font-size: clamp(2rem, 3.9vw, 3.7rem);
 }
+.hero-card p {
+  font-size: clamp(1.08rem, 1.35vw, 1.22rem);
+  line-height: 1.72;
+}
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 .marquee {
   border-top: 1px solid var(--line);
