@@ -8,6 +8,7 @@ form:
   namePlaceholder: Name
   emailPlaceholder: Email
   phonePlaceholder: Phone 
+  insurancePlaceholder: Insurance Provider (if applicable)
   messagePlaceholder: How can we help you?
   buttonText: Send Inquiry
   note: .

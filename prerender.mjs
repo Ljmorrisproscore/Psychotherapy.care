@@ -822,6 +822,7 @@ const renderContact = (data) => {
   const mapDirectionsText = details.mapDirectionsText ?? "Get Directions";
   const locationImageSrc = details.locationImageSrc ?? "";
   const locationImageAlt = details.locationImageAlt ?? "Office location photo";
+  const insurancePlaceholder = form.insurancePlaceholder ?? "Insurance Provider (if applicable)";
 
   return `
     <section class='page-hero'>
@@ -845,6 +846,7 @@ const renderContact = (data) => {
               <input class='input' type='text' name='name' placeholder='${escapeHtml(form.namePlaceholder)}' required>
               <input class='input' type='email' name='email' placeholder='${escapeHtml(form.emailPlaceholder)}' required>
               <input class='input' type='text' name='phone' placeholder='${escapeHtml(form.phonePlaceholder)}'>
+              <input class='input' type='text' name='insuranceProvider' placeholder='${escapeHtml(insurancePlaceholder)}'>
               <textarea name='message' placeholder='${escapeHtml(form.messagePlaceholder)}' required></textarea>
               <button class='btn' type='submit'>${escapeHtml(form.buttonText)}</button>
             </form>
